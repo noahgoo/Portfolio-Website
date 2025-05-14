@@ -1,6 +1,8 @@
 Primary Purpose
 
-- Create a unique platform to display completed projects, skills gained, and knowlede learned. Use this portfolio to attract future employers and land a 2026 summer internship.
+- Create a unique platform to display completed projects, skills gained,
+ and knowlede learned. Use this portfolio to attract future employers
+ and land a 2026 summer internship.
 
 Key Information to Highlight
 
