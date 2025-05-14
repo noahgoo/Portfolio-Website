@@ -1,0 +1,22 @@
+Primary Purpose
+
+- Create a unique platform to display completed projects, skills gained, and knowlede learned. Use this portfolio to attract future employers and land a 2026 summer internship.
+
+Key Information to Highlight
+
+- Technical skills developed
+- Problem Solved capability
+- Each project completed
+- Goals and aspirations
+
+Must-Have Features
+
+- Project overview items
+- Personal Mission Statement
+- Links to socials
+- GitHub repo link
+
+Nice to Have Features
+
+- Scrollable Project archive
+- Interactive way to use certain code from projects
