@@ -85,7 +85,7 @@
 }
 
 .project-image {
-  height: 250px;
+  height: 300px;
   background: var(--gradient-purple-blue);
   display: flex;
   align-items: center;
@@ -121,6 +121,31 @@
   font-weight: 600;
   z-index: 1;
   text-align: center;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+}
+
+/* Alternative styles you can use by adding classes to your images */
+.project-img.contain {
+  object-fit: contain;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.project-img.website {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project-img.app {
+  object-fit: cover;
+  object-position: center center;
 }
 
 .project-content {
