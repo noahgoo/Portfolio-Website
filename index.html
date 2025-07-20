@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah Goo - Computer Engineering Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">Noah Goo</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="skills.html" class="nav-link">Skills</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Background Shapes -->
+    <div class="background-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Hi, I'm Noah Goo</h1>
+          <h2 class="hero-subtitle">Computer Engineering Student at BYU</h2>
+          <p class="hero-description">
+            Passionate about solving complex problems through innovative
+            technology. Currently pursuing my degree in Computer Engineering
+            while building projects that demonstrate my technical skills and
+            creativity.
+          </p>
+          <div class="hero-buttons">
+            <a href="projects.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            onclick="window.location.href='projects.html#project1'"
+          >
+            <div class="project-image">
+              <div class="project-placeholder">Project 1</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 1</h3>
+              <p class="project-description">
+                Brief description of the project and technologies used.
+              </p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">React</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="window.location.href='projects.html#project2'"
+          >
+            <div class="project-image">
+              <div class="project-placeholder">Project 2</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 2</h3>
+              <p class="project-description">
+                Brief description of the project and technologies used.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="window.location.href='projects.html#project3'"
+          >
+            <div class="project-image">
+              <div class="project-placeholder">Project 3</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 3</h3>
+              <p class="project-description">
+                Brief description of the project and technologies used.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C++</span>
+                <span class="tag">Embedded Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="window.location.href='projects.html#project4'"
+          >
+            <div class="project-image">
+              <div class="project-placeholder">Project 4</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 4</h3>
+              <p class="project-description">
+                Brief description of the project and technologies used.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Verilog</span>
+                <span class="tag">FPGA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view-all-projects">
+          <a href="projects.html" class="btn btn-outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Noah Goo</h3>
+            <p>Computer Engineering Student at BYU</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">GitHub</a>
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Noah Goo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
