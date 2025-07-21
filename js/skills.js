@@ -275,12 +275,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             
             .level-badge.proficient {
-                background: var(--gradient-mint-lavender);
+                background: var(--gradient-green-aqua);
                 color: var(--text-primary);
             }
             
             .level-badge.intermediate {
-                background: var(--gradient-green-aqua);
+                background: var(--gradient-pink-yellow);
                 color: var(--text-primary);
             }
             

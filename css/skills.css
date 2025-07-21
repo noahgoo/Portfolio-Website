@@ -195,11 +195,11 @@
 }
 
 .legend-circle.proficient {
-  background: var(--gradient-mint-lavender);
+  background: var(--gradient-green-aqua);
 }
 
 .legend-circle.intermediate {
-  background: var(--gradient-green-aqua);
+  background: var(--gradient-pink-yellow);
 }
 
 .legend-circle.learning {
