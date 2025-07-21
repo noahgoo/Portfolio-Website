@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const randomDelay = Math.random() * 2;
     circle.style.animationDelay = `${randomDelay}s`;
 
+    // Set skill level background based on the skill
+    const skill = circle.getAttribute("data-skill");
+    setSkillLevelBackground(circle, skill);
+
     // Add hover effects
     circle.addEventListener("mouseenter", function () {
       this.style.animationPlayState = "paused";
@@ -60,6 +64,55 @@ document.addEventListener("DOMContentLoaded", function () {
       showSkillInfo(skill);
     });
   });
+
+  // Function to set skill level background
+  function setSkillLevelBackground(circle, skill) {
+    const skillInfo = {
+      Python: { level: "Expert" },
+      "C++": { level: "Proficient" },
+      JavaScript: { level: "Proficient" },
+      Java: { level: "Intermediate" },
+      Verilog: { level: "Intermediate" },
+      MATLAB: { level: "Proficient" },
+      React: { level: "Intermediate" },
+      "Node.js": { level: "Intermediate" },
+      "HTML/CSS": { level: "Proficient" },
+      MongoDB: { level: "Learning" },
+      "Express.js": { level: "Learning" },
+      Firebase: { level: "Learning" },
+      Arduino: { level: "Proficient" },
+      ESP32: { level: "Intermediate" },
+      FPGA: { level: "Intermediate" },
+      "Raspberry Pi": { level: "Intermediate" },
+      "PCB Design": { level: "Learning" },
+      IoT: { level: "Intermediate" },
+      TensorFlow: { level: "Intermediate" },
+      PyTorch: { level: "Learning" },
+      OpenCV: { level: "Intermediate" },
+      "Scikit-learn": { level: "Intermediate" },
+      "Computer Vision": { level: "Intermediate" },
+      "Neural Networks": { level: "Learning" },
+      Git: { level: "Proficient" },
+      Docker: { level: "Learning" },
+      Vivado: { level: "Intermediate" },
+      "Eagle CAD": { level: "Learning" },
+      "VS Code": { level: "Proficient" },
+      Linux: { level: "Intermediate" },
+    };
+
+    const info = skillInfo[skill] || { level: "Learning" };
+
+    // Remove any existing level classes
+    circle.classList.remove(
+      "skill-expert",
+      "skill-proficient",
+      "skill-intermediate",
+      "skill-learning"
+    );
+
+    // Add the appropriate level class
+    circle.classList.add(`skill-${info.level.toLowerCase()}`);
+  }
 
   // Skill information display
   function showSkillInfo(skill) {
@@ -275,12 +328,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             
             .level-badge.proficient {
-                background: var(--gradient-green-aqua);
+                background: var(--gradient-mint-lavender);
                 color: var(--text-primary);
             }
             
             .level-badge.intermediate {
-                background: var(--gradient-pink-yellow);
+                background: var(--gradient-green-aqua);
                 color: var(--text-primary);
             }
             

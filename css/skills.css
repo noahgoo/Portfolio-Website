@@ -76,7 +76,6 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: var(--gradient-mint-lavender);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,6 +85,23 @@
   transition: all 0.3s ease;
   animation: bounce 3s ease-in-out infinite;
   box-shadow: var(--shadow-md);
+}
+
+/* Skill level background classes */
+.skill-circle.skill-expert {
+  background: var(--gradient-purple-blue);
+}
+
+.skill-circle.skill-proficient {
+  background: var(--gradient-mint-lavender);
+}
+
+.skill-circle.skill-intermediate {
+  background: var(--gradient-green-aqua);
+}
+
+.skill-circle.skill-learning {
+  background: var(--gradient-peach-orange);
 }
 
 .skill-circle:hover {
@@ -101,7 +117,7 @@
   right: -2px;
   bottom: -2px;
   border-radius: 50%;
-  background: var(--gradient-purple-blue);
+  background: var(--gradient-pink-yellow);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -195,11 +211,11 @@
 }
 
 .legend-circle.proficient {
-  background: var(--gradient-green-aqua);
+  background: var(--gradient-mint-lavender);
 }
 
 .legend-circle.intermediate {
-  background: var(--gradient-pink-yellow);
+  background: var(--gradient-green-aqua);
 }
 
 .legend-circle.learning {
