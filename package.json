@@ -4,7 +4,12 @@
   "description": "Professional portfolio showcasing my projects, skills, and experience as a BYU Computer Engineering student. Built with HTML, CSS, and JavaScript to demonstrate technical abilities and provide a hub for my professional presence.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:resend": "node test-resend-api.js",
+    "check:env": "node check-env.js",
+    "test:endpoint": "node test-contact-endpoint.js",
+    "debug:email": "node debug-email-delivery.js",
+    "dev": "echo \"Starting development server...\" && echo \"Note: This is a static site. Use a local server like 'python -m http.server' or 'npx serve'\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +24,8 @@
   },
   "homepage": "https://github.com/noahgoo/Portfolio-Website#readme",
   "dependencies": {
+    "dotenv": "^16.6.1",
+    "node-fetch": "^2.7.0",
     "resend": "^4.7.0"
   }
 }

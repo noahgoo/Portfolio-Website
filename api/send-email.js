@@ -20,8 +20,8 @@ module.exports = async (req, res) => {
     const { name, email, subject, message } = req.body;
 
     const data = await resend.emails.send({
-      from: "your-portfolio@yourdomain.com", // Update this with your verified domain
-      to: "noah.goo@byu.edu",
+      from: "onboarding@resend.dev", // Using Resend's sandbox domain for testing
+      to: "noahgoo@byu.edu", // Fixed: removed the dot to match Resend account
       subject: `Portfolio Contact: ${subject}`,
       html: `
         <h2>New Contact Form Submission</h2>
