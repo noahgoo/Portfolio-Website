@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Submit form
-  function submitForm() {
+  async function submitForm() {
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
@@ -126,21 +126,46 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.disabled = true;
     submitBtn.style.opacity = "0.7";
 
-    // Simulate form submission
-    setTimeout(() => {
-      // Success state
-      submitBtn.textContent = "Message Sent!";
-      submitBtn.style.background = "var(--gradient-green-aqua)";
+    try {
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+      };
 
-      // Show success message
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        // Success state
+        submitBtn.textContent = "Message Sent!";
+        submitBtn.style.background = "var(--gradient-green-aqua)";
+
+        showNotification(
+          "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+          "success"
+        );
+
+        // Reset form
+        contactForm.reset();
+      } else {
+        throw new Error(result.error || "Failed to send message");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
       showNotification(
-        "Thank you! Your message has been sent successfully. I'll get back to you soon.",
-        "success"
+        "Failed to send message. Please try again or email me directly.",
+        "error"
       );
-
-      // Reset form
-      contactForm.reset();
-
+    } finally {
       // Reset button after delay
       setTimeout(() => {
         submitBtn.textContent = originalText;
@@ -148,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.style.opacity = "1";
         submitBtn.style.background = "var(--gradient-peach-orange)";
       }, 3000);
-    }, 2000);
+    }
   }
 
   // Contact card interactions
@@ -255,8 +280,8 @@ document.addEventListener("DOMContentLoaded", function () {
                   type === "success"
                     ? "#10B981"
                     : type === "error"
-                    ? "#EF4444"
-                    : "#3B82F6"
+                      ? "#EF4444"
+                      : "#3B82F6"
                 };
                 color: white;
                 padding: 1rem 1.5rem;

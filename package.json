@@ -1,0 +1,24 @@
+{
+  "name": "projectportfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio showcasing my projects, skills, and experience as a BYU Computer Engineering student. Built with HTML, CSS, and JavaScript to demonstrate technical abilities and provide a hub for my professional presence.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahgoo/Portfolio-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/noahgoo/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/noahgoo/Portfolio-Website#readme",
+  "dependencies": {
+    "resend": "^4.7.0"
+  }
+}
