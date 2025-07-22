@@ -68,36 +68,47 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to set skill level background
   function setSkillLevelBackground(circle, skill) {
     const skillInfo = {
-      Python: { level: "Expert" },
+      Python: { level: "Proficient" },
       "C++": { level: "Proficient" },
-      JavaScript: { level: "Proficient" },
+      JavaScript: { level: "Intermediate" },
       Java: { level: "Intermediate" },
-      Verilog: { level: "Intermediate" },
-      MATLAB: { level: "Proficient" },
+      TypeScript: { level: "Intermediate" },
+      SQL: { level: "Intermediate" },
+      // Verilog: { level: "Intermediate" },
+      // MATLAB: { level: "Proficient" },
       React: { level: "Intermediate" },
-      "Node.js": { level: "Intermediate" },
-      "HTML/CSS": { level: "Proficient" },
-      MongoDB: { level: "Learning" },
-      "Express.js": { level: "Learning" },
-      Firebase: { level: "Learning" },
+      // "Node.js": { level: "Intermediate" },
+      "HTML/CSS": { level: "Intermediate" },
+      "Next.js": { level: "Intermediate" },
+      "Tailwind CSS": { level: "Intermediate" },
+      Stripe: { level: "Intermediate" },
+      "REST API": { level: "Intermediate" },
+      //MongoDB: { level: "Learning" },
+      //"Express.js": { level: "Learning" },
+      Firebase: { level: "Proficient" },
       Arduino: { level: "Proficient" },
-      ESP32: { level: "Intermediate" },
-      FPGA: { level: "Intermediate" },
-      "Raspberry Pi": { level: "Intermediate" },
-      "PCB Design": { level: "Learning" },
-      IoT: { level: "Intermediate" },
-      TensorFlow: { level: "Intermediate" },
-      PyTorch: { level: "Learning" },
-      OpenCV: { level: "Intermediate" },
-      "Scikit-learn": { level: "Intermediate" },
-      "Computer Vision": { level: "Intermediate" },
-      "Neural Networks": { level: "Learning" },
+      "Sensors & Actuators": { level: "Proficient" },
+      "Circuit Design": { level: "Intermediate" },
+      "Breadboard & Soldering": { level: "Intermediate" },
+      // ESP32: { level: "Intermediate" },
+      // FPGA: { level: "Intermediate" },
+      // "Raspberry Pi": { level: "Intermediate" },
+      // "PCB Design": { level: "Learning" },
+      // IoT: { level: "Intermediate" },
+      // TensorFlow: { level: "Intermediate" },
+      // PyTorch: { level: "Learning" },
+      // OpenCV: { level: "Intermediate" },
+      // "Scikit-learn": { level: "Intermediate" },
+      // "Computer Vision": { level: "Intermediate" },
+      // "Neural Networks": { level: "Learning" },
       Git: { level: "Proficient" },
+      GitHub: { level: "Proficient" },
       Docker: { level: "Learning" },
-      Vivado: { level: "Intermediate" },
-      "Eagle CAD": { level: "Learning" },
       "VS Code": { level: "Proficient" },
-      Linux: { level: "Intermediate" },
+      // Linux: { level: "Intermediate" },
+      "Autodesk Fusion": { level: "Learning" },
+      Firestore: { level: "Intermediate" },
+      "Google Apps Script": { level: "Intermediate" },
     };
 
     const info = skillInfo[skill] || { level: "Learning" };
@@ -118,69 +129,186 @@ document.addEventListener("DOMContentLoaded", function () {
   function showSkillInfo(skill) {
     const skillInfo = {
       Python: {
-        level: "Expert",
+        level: "Proficient",
         description:
-          "Advanced Python development with focus on data science, automation, and web development.",
-        projects: [
-          "Machine Learning Models",
-          "Web Scraping Tools",
-          "API Development",
-        ],
+          "First language learned. Used in scripting, data processing, and building applications.",
+        projects: ["Datalog interpreter"],
       },
       "C++": {
         level: "Proficient",
         description:
-          "Object-oriented programming, embedded systems, and performance-critical applications.",
+          "Object-oriented programming, embedded systems, and low-level systems development. Applied C++ in embedded systems, sensor integration, and logic-driven automation projects.",
         projects: [
-          "Embedded Systems",
-          "Algorithm Implementation",
-          "System Programming",
+          "Mini Security System (Arduino-Based)",
+          "Smart Weather Station",
+          "Smart Doorbell",
+          "Arduino Light Following Robot",
         ],
       },
-      JavaScript: {
-        level: "Proficient",
-        description:
-          "Frontend and backend development with modern frameworks and libraries.",
-        projects: ["Web Applications", "React Projects", "Node.js APIs"],
-      },
-      React: {
+      Java: {
         level: "Intermediate",
         description:
-          "Building responsive and interactive user interfaces with React ecosystem.",
+          "Used in object-oriented programming, and full stack development.",
+        projects: ["Chess Game"],
+      },
+      JavaScript: {
+        level: "Intermediate",
+        description:
+          "Frontend and backend development with React and Firebase.",
+        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+      },
+      TypeScript: {
+        level: "Intermediate",
+        description:
+          "Used in building web applications and mobile apps with React/Next.js.",
         projects: [
           "Portfolio Website",
-          "E-commerce Platform",
-          "Dashboard Applications",
+          "CFA Workflow Tracker",
+          "Aiyu Swimwear Website",
         ],
+      },
+      SQL: {
+        level: "Intermediate",
+        description: "Used in building databases and data analysis.",
+        projects: ["Chess Game", "CFA Workflow Tracker"],
       },
       Arduino: {
         level: "Proficient",
         description: "Microcontroller programming and IoT device development.",
         projects: [
-          "Smart Home Systems",
-          "Sensor Networks",
-          "Automation Projects",
+          "Mini Security System (Arduino-Based)",
+          "Smart Weather Station",
+          "Smart Doorbell",
+          "Arduino Light Following Robot",
         ],
       },
-      FPGA: {
+      React: {
         level: "Intermediate",
         description:
-          "Digital design and hardware acceleration using Verilog and FPGA platforms.",
+          "Building responsive and interactive user interfaces with React.",
+        projects: ["CFA Workflow Tracker"],
+      },
+      "HTML/CSS": {
+        level: "Intermediate",
+        description:
+          "Used in building interactive user interfaces and to style, layout, and design web applications.",
+        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+      },
+      "Next.js": {
+        level: "Intermediate",
+        description: "Used in building web applications.",
+        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+      },
+      "Tailwind CSS": {
+        level: "Intermediate",
+        description:
+          "Used in building responsive and interactive user interfaces.",
+        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+      },
+      Stripe: {
+        level: "Intermediate",
+        description:
+          "Used in building payment systems and e-commerce platforms.",
+        projects: ["Aiyu Swimwear Website"],
+      },
+      "REST API": {
+        level: "Intermediate",
+        description:
+          "Used in building REST APIs for websites and other applications.",
         projects: [
-          "Digital Signal Processing",
-          "Custom Processors",
-          "Hardware Acceleration",
+          "CFA Workflow Tracker",
+          "Budgeting App",
+          "Aiyu Swimwear Website",
+          "Chess Game",
         ],
       },
-      TensorFlow: {
+      "Sensors & Actuators": {
+        level: "Proficient",
+        description:
+          "Used in building IoT devices and embedded systems. Used ultrasonic sensors, servo motors, LCDs, and other sensors and actuators to build projects.",
+        projects: [
+          "Smart Weather Station",
+          "Smart Doorbell",
+          "Arduino Light Following Robot",
+          "Mini Security System (Arduino-Based)",
+        ],
+      },
+      "Circuit Design": {
         level: "Intermediate",
-        description: "Machine learning and deep learning model development.",
-        projects: ["Computer Vision", "Neural Networks", "Predictive Models"],
+        description:
+          "Taken Intro to Circuits course. Used in hands-on projects to build circuits and systems.",
+        projects: [
+          "Smart Weather Station",
+          "Mini Security System (Arduino-Based)",
+          "Arduino Light Following Robot",
+        ],
+      },
+      "Breadboard & Soldering": {
+        level: "Intermediate",
+        description: "Used lightly in building systems with Arduino.",
+        projects: ["Arduino Light Following Robot"],
+      },
+      Firebase: {
+        level: "Proficient",
+        description: "Used in deploying projects and hosting.",
+        projects: ["CFA Workflow Tracker", "Budgeting App"],
+      },
+      Firestore: {
+        level: "Intermediate",
+        description:
+          "Used in building databases, authentication, and data analysis.",
+        projects: ["CFA Workflow Tracker", "Budgeting App"],
+      },
+      "Google Apps Script": {
+        level: "Intermediate",
+        description:
+          "Used in building automation and data retrieval from Firebase.",
+        projects: ["CFA Workflow Tracker"],
       },
       Git: {
         level: "Proficient",
-        description: "Version control and collaborative development workflows.",
-        projects: ["Project Management", "Team Collaboration", "Code Review"],
+        description:
+          "Regular use with GitHub across projects. Comfortable with CLI and branches. Used to manage version control and collaborative development workflows.",
+        projects: [
+          "Aiyu Swimwear Website",
+          "Chess Game",
+          "Portfolio Website",
+          "CFA Workflow Tracker",
+          "Budgeting App",
+        ],
+      },
+      GitHub: {
+        level: "Proficient",
+        description:
+          "Used to host repositories, deploy projects, integrate with Vercel, and collaborate with others.",
+        projects: [
+          "Aiyu Swimwear Website",
+          "Chess Game",
+          "Portfolio Website",
+          "CFA Workflow Tracker",
+          "Budgeting App",
+          "Datalog Interpreter",
+        ],
+      },
+      "VS Code": {
+        level: "Proficient",
+        description:
+          "Preferred IDE for building web applications and mobile apps. Often integrated with Cursor for AI-assisted coding.",
+        projects: [
+          "CFA Workflow Tracker",
+          "Budgeting App",
+          "Aiyu Swimwear Website",
+        ],
+      },
+      Docker: {
+        level: "Learning",
+        description: "Used in building automation and deployment.",
+        projects: ["Flashcard Automation"],
+      },
+      "Autodesk Fusion": {
+        level: "Learning",
+        description: "Used in building 3D models for printing.",
+        projects: ["Arduino Light Following Robot"],
       },
     };
 
