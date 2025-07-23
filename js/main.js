@@ -87,42 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 
-  // Form validation and submission
-  const contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Basic form validation
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const subject = document.getElementById("subject").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      if (!name || !email || !subject || !message) {
-        showNotification("Please fill in all fields.", "error");
-        return;
-      }
-
-      if (!isValidEmail(email)) {
-        showNotification("Please enter a valid email address.", "error");
-        return;
-      }
-
-      // Simulate form submission
-      showNotification(
-        "Message sent successfully! I'll get back to you soon.",
-        "success"
-      );
-      contactForm.reset();
-    });
-  }
-
-  // Email validation helper
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
+  // Contact form removed - no longer needed
 
   // Notification system
   function showNotification(message, type = "info") {
@@ -144,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
               type === "success"
                 ? "#10B981"
                 : type === "error"
-                ? "#EF4444"
-                : "#3B82F6"
+                  ? "#EF4444"
+                  : "#3B82F6"
             };
             color: white;
             padding: 1rem 1.5rem;
