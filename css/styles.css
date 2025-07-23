@@ -12,6 +12,8 @@
   --gradient-purple-blue: linear-gradient(135deg, #c3a5f8 0%, #7acaf9 100%);
   --gradient-mint-lavender: linear-gradient(135deg, #b9ffe3 0%, #d0c7f8 100%);
   --gradient-peach-orange: linear-gradient(135deg, #fdd6b5 0%, #ffe98a 100%);
+  --gradient-pink-orange: linear-gradient(135deg, #ffb1c6 0%, #f79926 100%);
+  --gradient-lime-sky: linear-gradient(135deg, #29f04b 0%, #33b2ed 100%);
 
   /* Background */
   --bg-color: #f2f0f5;

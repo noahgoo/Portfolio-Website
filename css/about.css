@@ -3,7 +3,7 @@
 /* Page Header */
 .page-header {
   background: var(--gradient-green-aqua);
-  color: var(--text-primary);
+  color: white;
   padding: 8rem 0 4rem;
   text-align: center;
   position: relative;
@@ -27,7 +27,7 @@
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
-  background: var(--gradient-purple-blue);
+  background: var(--gradient-lime-sky);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
