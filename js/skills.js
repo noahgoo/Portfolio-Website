@@ -70,19 +70,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const skillInfo = {
       Python: { level: "Proficient" },
       "C++": { level: "Proficient" },
-      JavaScript: { level: "Intermediate" },
+      JavaScript: { level: "Learning" },
       Java: { level: "Intermediate" },
-      TypeScript: { level: "Intermediate" },
+      TypeScript: { level: "Learning" },
       SQL: { level: "Intermediate" },
       // Verilog: { level: "Intermediate" },
       // MATLAB: { level: "Proficient" },
-      React: { level: "Intermediate" },
+      React: { level: "Learning" },
       // "Node.js": { level: "Intermediate" },
-      "HTML/CSS": { level: "Intermediate" },
-      "Next.js": { level: "Intermediate" },
-      "Tailwind CSS": { level: "Intermediate" },
-      Stripe: { level: "Intermediate" },
-      "REST API": { level: "Intermediate" },
+      "HTML/CSS": { level: "Learning" },
+      "Next.js": { level: "Learning" },
+      "Tailwind CSS": { level: "Learning" },
+      Stripe: { level: "Learning" },
+      "REST API": { level: "Learning" },
       //MongoDB: { level: "Learning" },
       //"Express.js": { level: "Learning" },
       Firebase: { level: "Proficient" },
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         level: "Proficient",
         description:
           "First language learned. Used in scripting, data processing, and building applications.",
-        projects: ["Datalog interpreter"],
+        projects: ["Datalog interpreter", "Religion Project"],
       },
       "C++": {
         level: "Proficient",
@@ -152,13 +152,13 @@ document.addEventListener("DOMContentLoaded", function () {
         projects: ["Chess Game"],
       },
       JavaScript: {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Frontend and backend development with React and Firebase.",
         projects: ["Portfolio Website", "Aiyu Swimwear Website"],
       },
       TypeScript: {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Used in building web applications and mobile apps with React/Next.js.",
         projects: [
@@ -183,36 +183,36 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
       },
       React: {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Building responsive and interactive user interfaces with React.",
         projects: ["CFA Workflow Tracker"],
       },
       "HTML/CSS": {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Used in building interactive user interfaces and to style, layout, and design web applications.",
         projects: ["Portfolio Website", "Aiyu Swimwear Website"],
       },
       "Next.js": {
-        level: "Intermediate",
+        level: "Learning",
         description: "Used in building web applications.",
         projects: ["Portfolio Website", "Aiyu Swimwear Website"],
       },
       "Tailwind CSS": {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Used in building responsive and interactive user interfaces.",
         projects: ["Portfolio Website", "Aiyu Swimwear Website"],
       },
       Stripe: {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Used in building payment systems and e-commerce platforms.",
         projects: ["Aiyu Swimwear Website"],
       },
       "REST API": {
-        level: "Intermediate",
+        level: "Learning",
         description:
           "Used in building REST APIs for websites and other applications.",
         projects: [
