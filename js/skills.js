@@ -109,9 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "Autodesk Fusion": { level: "Learning" },
       Firestore: { level: "Intermediate" },
       "Google Apps Script": { level: "Intermediate" },
+      "Claude Code": { level: "Proficient" },
+      MATLAB: { level: "Learning" },
+      KiCad: { level: "Learning" },
     };
 
     const info = skillInfo[skill] || { level: "Learning" };
+    console.log(`Skill: "${skill}", Found info:`, info);
 
     // Remove any existing level classes
     circle.classList.remove(
@@ -309,6 +313,25 @@ document.addEventListener("DOMContentLoaded", function () {
         level: "Learning",
         description: "Used in building 3D models for printing.",
         projects: ["Arduino Light Following Robot"],
+      },
+      "Claude Code": {
+        level: "Proficient",
+        description: "Used in building web applications and mobile apps.",
+        projects: [
+          "Portfolio Website",
+          "CFA Workflow Tracker",
+          "Aiyu Swimwear Website",
+        ],
+      },
+      MATLAB: {
+        level: "Learning",
+        description: "Used in building simulations and data analysis.",
+        projects: ["Signals & Systems Course"],
+      },
+      KiCad: {
+        level: "Learning",
+        description: "Used in building PCB designs.",
+        projects: ["Laser Tag Project"],
       },
     };
 
