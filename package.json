@@ -19,5 +19,8 @@
     "url": "https://github.com/noahgoo/Portfolio-Website/issues"
   },
   "homepage": "https://github.com/noahgoo/Portfolio-Website#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0"
+  }
 }
