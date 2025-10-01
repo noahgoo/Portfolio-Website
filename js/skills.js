@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setSkillLevelBackground(circle, skill) {
     const skillInfo = {
       Python: { level: "Proficient" },
-      "C++": { level: "Proficient" },
+      "C/C++": { level: "Proficient" },
       JavaScript: { level: "Learning" },
       Java: { level: "Intermediate" },
       TypeScript: { level: "Learning" },
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "First language learned. Used in scripting, data processing, and building applications.",
         projects: ["Datalog interpreter", "Religion Project"],
       },
-      "C++": {
+      "C/C++": {
         level: "Proficient",
         description:
           "Object-oriented programming, embedded systems, and low-level systems development. Applied C++ in embedded systems, sensor integration, and logic-driven automation projects.",
