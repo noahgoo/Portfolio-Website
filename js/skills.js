@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Java: { level: "Intermediate" },
       TypeScript: { level: "Learning" },
       SQL: { level: "Intermediate" },
+      Swift: { level: "Learning" },
       // Verilog: { level: "Intermediate" },
       // MATLAB: { level: "Proficient" },
       React: { level: "Learning" },
@@ -170,6 +171,12 @@ document.addEventListener("DOMContentLoaded", function () {
           "CFA Workflow Tracker",
           "Aiyu Swimwear Website",
         ],
+      },
+      Swift: {
+        level: "Learning",
+        description:
+          "Used in building macOS menu bar applications.",
+        projects: ["AnkiEx (Startup)"],
       },
       SQL: {
         level: "Intermediate",

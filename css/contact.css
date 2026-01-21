@@ -196,6 +196,11 @@
   color: var(--text-primary);
 }
 
+.availability-status.busy {
+  background: var(--gradient-peach-orange);
+  color: var(--text-primary);
+}
+
 /* Quick Links Section */
 .quick-links-section {
   padding: 4rem 0;
