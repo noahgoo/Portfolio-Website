@@ -89,12 +89,21 @@ document.addEventListener("DOMContentLoaded", function () {
     window.showNotification = function (message, type = "info") {
       const notification = document.createElement("div");
       notification.className = `notification notification-${type}`;
-      notification.innerHTML = `
-                <div class="notification-content">
-                    <span class="notification-message">${message}</span>
-                    <button class="notification-close">&times;</button>
-                </div>
-            `;
+
+      const content = document.createElement("div");
+      content.className = "notification-content";
+
+      const messageSpan = document.createElement("span");
+      messageSpan.className = "notification-message";
+      messageSpan.textContent = message;
+
+      const closeBtn = document.createElement("button");
+      closeBtn.className = "notification-close";
+      closeBtn.textContent = "\u00D7";
+
+      content.appendChild(messageSpan);
+      content.appendChild(closeBtn);
+      notification.appendChild(content);
 
       // Add styles
       notification.style.cssText = `
@@ -126,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 100);
 
       // Close button functionality
-      const closeBtn = notification.querySelector(".notification-close");
       closeBtn.addEventListener("click", () => {
         notification.style.transform = "translateX(100%)";
         setTimeout(() => {
