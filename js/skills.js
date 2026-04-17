@@ -66,13 +66,15 @@ const SKILL_CATEGORIES = [
       {
         name: "SystemVerilog",
         level: "intermediate",
-        description: "Used in digital design, RTL modeling, and hardware description for coursework.",
+        description:
+          "Used in digital design, RTL modeling, and hardware description for coursework.",
         projects: ["Digital Design Course"],
       },
       {
         name: "Assembly",
         level: "learning",
-        description: "Low-level programming covered in computer architecture coursework.",
+        description:
+          "Low-level programming covered in computer architecture coursework.",
         projects: ["Computer Architecture Course"],
       },
     ],
@@ -109,8 +111,13 @@ const SKILL_CATEGORIES = [
       {
         name: "Node.js",
         level: "intermediate",
-        description: "Used as the runtime for Next.js backends and server-side scripting.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website", "CFA Workflow Tracker"],
+        description:
+          "Used as the runtime for Next.js backends and server-side scripting.",
+        projects: [
+          "Portfolio Website",
+          "Aiyu Swimwear Website",
+          "CFA Workflow Tracker",
+        ],
       },
       {
         name: "Stripe",
@@ -248,7 +255,8 @@ const SKILL_CATEGORIES = [
       {
         name: "Vitest",
         level: "intermediate",
-        description: "Used for unit and integration testing across web projects.",
+        description:
+          "Used for unit and integration testing across web projects.",
         projects: ["Portfolio Website", "CFA Workflow Tracker"],
       },
       {
@@ -274,6 +282,12 @@ const SKILL_CATEGORIES = [
         level: "learning",
         description: "Used in building PCB designs.",
         projects: ["Laser Tag Project"],
+      },
+      {
+        name: "AWS",
+        level: "learning",
+        description: "Used in cloud computing and hosting services.",
+        projects: ["Flashcard Automation"],
       },
     ],
   },

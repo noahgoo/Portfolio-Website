@@ -30,10 +30,7 @@ const PROJECTS = [
       "Instagram integration",
       "Hosted on Vercel",
     ],
-    links: [
-      { label: "View Site", href: "https://aiyuswim.com", style: "primary" },
-      { label: "Code Unavailable", href: "#", style: "outline" },
-    ],
+    links: [],
     href: "https://aiyuswim.com",
   },
   {
@@ -53,8 +50,11 @@ const PROJECTS = [
       "Client-server architecture",
     ],
     links: [
-      { label: "Demo Unavailable", href: "#", style: "primary" },
-      { label: "View GitHub", href: "https://github.com/noahgoo/chess", style: "outline" },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/chess",
+        style: "outline",
+      },
     ],
     href: "https://github.com/noahgoo/chess",
   },
@@ -75,8 +75,11 @@ const PROJECTS = [
       "Breakfast and Lunch/Dinner toggle",
     ],
     links: [
-      { label: "Demo Unavailable", href: "#", style: "primary" },
-      { label: "View GitHub", href: "https://github.com/noahgoo/CFA-Hold-Logger.git", style: "outline" },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/CFA-Hold-Logger.git",
+        style: "outline",
+      },
     ],
     href: "https://github.com/noahgoo/CFA-Hold-Logger.git",
   },
@@ -97,7 +100,11 @@ const PROJECTS = [
       "Ultrasonic obstacle detection",
     ],
     links: [
-      { label: "View Demo", href: "https://youtu.be/2vacC3jIk4E", style: "primary" },
+      {
+        label: "View Demo",
+        href: "https://youtu.be/2vacC3jIk4E",
+        style: "primary",
+      },
       { label: "Source Code", href: "robot-code.html", style: "outline" },
     ],
     href: "https://youtu.be/2vacC3jIk4E",
@@ -119,8 +126,11 @@ const PROJECTS = [
       "Rule evaluation engine",
     ],
     links: [
-      { label: "Demo Unavailable", href: "#", style: "primary" },
-      { label: "View GitHub", href: "https://github.com/byu-cs-236-f24/project-5-noahgoo.git", style: "outline" },
+      {
+        label: "View GitHub",
+        href: "https://github.com/byu-cs-236-f24/project-5-noahgoo.git",
+        style: "outline",
+      },
     ],
     href: "https://github.com/byu-cs-236-f24/project-5-noahgoo.git",
   },
@@ -141,8 +151,16 @@ const PROJECTS = [
       "Servo motor door lock",
     ],
     links: [
-      { label: "View Demo", href: "https://youtu.be/rSQOoB-HKwE", style: "primary" },
-      { label: "View GitHub", href: "https://github.com/noahgoo/Mini-Security-System.git", style: "outline" },
+      {
+        label: "View Demo",
+        href: "https://youtu.be/rSQOoB-HKwE",
+        style: "primary",
+      },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/Mini-Security-System.git",
+        style: "outline",
+      },
     ],
     href: "https://youtu.be/rSQOoB-HKwE",
   },
@@ -157,13 +175,18 @@ const PROJECTS = [
     tags: ["Arduino", "C++"],
     description:
       "Weather station using a Raspberry Pi, DHT11 sensor, and LCD screen to display live temperature and humidity.",
-    features: [
-      "Humidity and temperature sensor",
-      "LCD live readout",
-    ],
+    features: ["Humidity and temperature sensor", "LCD live readout"],
     links: [
-      { label: "View Demo", href: "https://youtube.com/shorts/LDfa5cCFOwM?feature=share", style: "primary" },
-      { label: "View GitHub", href: "https://github.com/noahgoo/Smart-Weather-Station.git", style: "outline" },
+      {
+        label: "View Demo",
+        href: "https://youtube.com/shorts/LDfa5cCFOwM?feature=share",
+        style: "primary",
+      },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/Smart-Weather-Station.git",
+        style: "outline",
+      },
     ],
     href: "https://youtube.com/shorts/LDfa5cCFOwM?feature=share",
   },
@@ -184,8 +207,11 @@ const PROJECTS = [
       "Menu for browsing photos",
     ],
     links: [
-      { label: "Demo Unavailable", href: "#", style: "primary" },
-      { label: "View GitHub", href: "https://github.com/byu-ecen-224-classroom/doorbell-noahgoo.git", style: "outline" },
+      {
+        label: "View GitHub",
+        href: "https://github.com/byu-ecen-224-classroom/doorbell-noahgoo.git",
+        style: "outline",
+      },
     ],
     href: "https://github.com/byu-ecen-224-classroom/doorbell-noahgoo.git",
   },
@@ -207,10 +233,112 @@ const PROJECTS = [
       "AI generation and custom RAG",
     ],
     links: [
-      { label: "View Website", href: "https://www.anki-ex.com/", style: "primary" },
-      { label: "Code Unavailable", href: "#", style: "outline" },
+      {
+        label: "View Website",
+        href: "https://www.anki-ex.com/",
+        style: "primary",
+      },
     ],
     href: "https://www.anki-ex.com/",
+  },
+  {
+    number: "10",
+    title: "MasteryLoop",
+    category: "web",
+    featured: true,
+    image: "assets/images/project_masteryloop.png",
+    imageClass: "",
+    imageStyle: "",
+    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
+    description:
+      "Full stack web app for engineers to master difficult concepts via spaced repetition. Create custom quizzes from homework, self-grade answers, and rework missed problems.",
+    features: [
+      "Custom quiz and question creation",
+      "Interactive self-grading workflow",
+      "Progress tracking with visual indicators",
+      "Real-time notifications via WebSocket",
+    ],
+    links: [
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/startup",
+        style: "outline",
+      },
+    ],
+    href: "https://github.com/noahgoo/startup",
+  },
+  {
+    number: "11",
+    title: "FPGA Pong",
+    category: "hardware",
+    featured: false,
+    image: "assets/images/project_fpga_pong.png",
+    imageClass: "",
+    imageStyle: "",
+    tags: ["SystemVerilog", "FPGA"],
+    description:
+      "Pong game implemented on an FPGA development board for a digital design course. Full hardware logic design using SystemVerilog RTL.",
+    features: [
+      "VGA display output",
+      "Player paddle control",
+      "Hardware collision detection",
+      "Score tracking",
+    ],
+    links: [{ label: "Demo Unavailable", href: "#", style: "primary" }],
+    href: "#",
+  },
+  {
+    number: "12",
+    title: "20/20/20 Eye Break App",
+    category: "software",
+    featured: false,
+    image: "assets/images/project_eye.png",
+    imageClass: "",
+    imageStyle: "",
+    tags: ["Python"],
+    description:
+      "macOS app implementing the 20/20/20 rule. Every 20 minutes it reminds you to look at something 20 feet away for 20 seconds to reduce eye strain.",
+    features: [
+      "20-minute interval reminders",
+      "Desktop system notifications",
+      "Lightweight background process",
+    ],
+    links: [
+      { label: "Demo Unavailable", href: "#", style: "primary" },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/eye",
+        style: "outline",
+      },
+    ],
+    href: "https://github.com/noahgoo/eye",
+  },
+  {
+    number: "13",
+    title: "ByteReels",
+    category: "web",
+    featured: true,
+    image: "assets/images/project_bytereels.png",
+    imageClass: "",
+    imageStyle: "",
+    tags: ["React", "Vite", "Tailwind CSS", "YouTube API"],
+    description:
+      "Mobile-first PWA that turns YouTube tech subscriptions into a swipeable Reels-style feed. Curates videos under 10 minutes from top channels by topic.",
+    features: [
+      "Installable PWA (home screen)",
+      "Swipeable short video feed",
+      "Topic-based filtering",
+      "CI/CD via GitHub Actions",
+    ],
+    links: [
+      { label: "Demo Unavailable", href: "#", style: "primary" },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/ByteReels",
+        style: "outline",
+      },
+    ],
+    href: "https://github.com/noahgoo/ByteReels",
   },
 ];
 
@@ -221,11 +349,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterBar = document.getElementById("filter-bar");
   if (!grid || !filterBar) return;
 
-  const CATEGORY_LABELS = { web: "Web", software: "Software", hardware: "Hardware", ai: "AI" };
+  const CATEGORY_LABELS = {
+    web: "Web",
+    software: "Software",
+    hardware: "Hardware",
+    ai: "AI",
+  };
 
   // Build filter bar
   const counts = { all: PROJECTS.length };
-  PROJECTS.forEach((p) => { counts[p.category] = (counts[p.category] || 0) + 1; });
+  PROJECTS.forEach((p) => {
+    counts[p.category] = (counts[p.category] || 0) + 1;
+  });
 
   const filters = ["all", ...Object.keys(CATEGORY_LABELS)];
   filters.forEach((key) => {
@@ -264,7 +399,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const img = document.createElement("img");
     img.src = project.image;
     img.alt = project.title;
-    img.className = "project-img" + (project.imageClass ? " " + project.imageClass : "");
+    img.className =
+      "project-img" + (project.imageClass ? " " + project.imageClass : "");
     if (project.imageStyle) img.style.cssText = project.imageStyle;
     cardImage.appendChild(img);
 
@@ -355,7 +491,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!btn) return;
     const filter = btn.dataset.filter;
 
-    filterBar.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+    filterBar
+      .querySelectorAll(".filter-btn")
+      .forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
 
     grid.querySelectorAll(".project-card").forEach((card) => {
