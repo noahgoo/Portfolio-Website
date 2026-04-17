@@ -1,6 +1,54 @@
 // Main JavaScript for Portfolio Website
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Custom cursor
+  const cursorDot = document.createElement("div");
+  cursorDot.className = "cursor-dot";
+  const cursorRing = document.createElement("div");
+  cursorRing.className = "cursor-ring";
+  document.body.appendChild(cursorDot);
+  document.body.appendChild(cursorRing);
+
+  let mouseX = 0,
+    mouseY = 0;
+  let ringX = 0,
+    ringY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursorDot.style.left = mouseX + "px";
+    cursorDot.style.top = mouseY + "px";
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    cursorRing.style.left = ringX + "px";
+    cursorRing.style.top = ringY + "px";
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Grow ring on interactive elements
+  const interactiveSelector =
+    "a, button, .project-card, .skill-circle, .mission-card, .contact-card, .quick-link-card, .interest-item, .availability-card";
+
+  document.querySelectorAll(interactiveSelector).forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursorDot.style.opacity = "0";
+      cursorRing.style.width = "48px";
+      cursorRing.style.height = "48px";
+      cursorRing.style.borderColor = "rgba(61, 79, 214, 0.7)";
+    });
+    el.addEventListener("mouseleave", () => {
+      cursorDot.style.opacity = "1";
+      cursorRing.style.width = "32px";
+      cursorRing.style.height = "32px";
+      cursorRing.style.borderColor = "rgba(61, 79, 214, 0.45)";
+    });
+  });
+
   // Mobile Navigation Toggle
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
@@ -11,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navMenu.classList.toggle("active");
     });
 
-    // Close mobile menu when clicking on a link
     document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -34,15 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Navbar background on scroll
+  // Navbar on scroll
   const navbar = document.querySelector(".navbar");
   if (navbar) {
     window.addEventListener("scroll", function () {
       if (window.scrollY > 50) {
-        navbar.style.background = "rgba(242, 240, 245, 0.98)";
-        navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+        navbar.style.background = "rgba(12, 12, 14, 0.98)";
+        navbar.style.boxShadow = "0 1px 0 rgba(37, 37, 41, 0.8)";
       } else {
-        navbar.style.background = "rgba(242, 240, 245, 0.95)";
+        navbar.style.background = "rgba(12, 12, 14, 0.9)";
         navbar.style.boxShadow = "none";
       }
     });
@@ -61,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Intersection Observer for animations
+  // Intersection Observer for scroll reveal
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -76,18 +123,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, observerOptions);
 
-  // Observe elements for animation
   const animateElements = document.querySelectorAll(
     ".project-card, .skill-circle, .mission-card, .contact-card, .availability-card, .quick-link-card"
   );
   animateElements.forEach((el) => {
     el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    el.style.transform = "translateY(24px)";
+    el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
     observer.observe(el);
   });
-
-  // Contact form removed - no longer needed
 
   // Notification system
   function showNotification(message, type = "info") {
@@ -109,36 +153,35 @@ document.addEventListener("DOMContentLoaded", function () {
     content.appendChild(closeBtn);
     notification.appendChild(content);
 
-    // Add styles
     notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: ${
-              type === "success"
-                ? "#10B981"
-                : type === "error"
-                  ? "#EF4444"
-                  : "#3B82F6"
-            };
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            z-index: 10000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            max-width: 400px;
-        `;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: ${
+        type === "success"
+          ? "#22c55e"
+          : type === "error"
+            ? "#ef4444"
+            : "#3d4fd6"
+      };
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      z-index: 10000;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      max-width: 380px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.875rem;
+    `;
 
     document.body.appendChild(notification);
 
-    // Animate in
     setTimeout(() => {
       notification.style.transform = "translateX(0)";
     }, 100);
 
-    // Close button functionality
     closeBtn.addEventListener("click", () => {
       notification.style.transform = "translateX(100%)";
       setTimeout(() => {
@@ -146,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 300);
     });
 
-    // Auto remove after 5 seconds
     setTimeout(() => {
       if (document.body.contains(notification)) {
         notification.style.transform = "translateX(100%)";
@@ -162,12 +204,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Project card click handlers
   document.querySelectorAll(".project-card").forEach((card) => {
     card.addEventListener("click", function () {
-      // Add click animation
       this.style.transform = "scale(0.98)";
       setTimeout(() => {
         this.style.transform = "";
       }, 150);
-      // Navigate via data-href if present
       const href = this.getAttribute("data-href");
       if (href) {
         window.location.href = href;
@@ -183,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Lazy loading for images (if any are added later)
+  // Lazy loading for images
   if ("IntersectionObserver" in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {

@@ -1,278 +1,214 @@
 /* Contact Page Specific Styles */
 
-/* Page Header */
-.page-header {
-  background: var(--gradient-peach-orange);
-  color: var(--text-primary);
-  padding: 8rem 0 4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.page-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(253,214,181,0.3)"/><circle cx="75" cy="75" r="1" fill="rgba(253,214,181,0.3)"/><circle cx="50" cy="10" r="0.5" fill="rgba(253,214,181,0.3)"/><circle cx="10" cy="60" r="0.5" fill="rgba(253,214,181,0.3)"/><circle cx="90" cy="40" r="0.5" fill="rgba(253,214,181,0.3)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.5;
-}
-
-.page-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
-  background: var(--gradient-pink-orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.page-subtitle {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Contact Section */
 .contact-section {
   padding: var(--section-padding);
-  background: var(--bg-color);
 }
 
 .contact-content {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* Contact Info */
-.contact-info {
-  /* Centered contact information */
-}
-
 .section-title {
+  font-family: "Instrument Serif", serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 2rem;
-  background: var(--gradient-peach-orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
+  letter-spacing: 0;
 }
 
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 800px;
+  gap: 1.5rem;
+  max-width: 720px;
   margin: 2rem auto 0;
 }
 
 .contact-card {
-  background: white;
+  background: var(--bg-surface);
   padding: 2rem;
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(253, 214, 181, 0.1);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s ease, transform 0.3s ease;
   text-align: center;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(253, 214, 181, 0.3);
+  border-color: rgba(61, 79, 214, 0.4);
+  transform: translateY(-3px);
 }
 
 .contact-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .contact-card h3 {
+  font-family: "Instrument Serif", serif;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
 .contact-card p {
-  color: var(--text-light);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
 .location-detail {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  font-size: 0.8rem;
+  color: var(--text-light);
   font-style: italic;
 }
 
 .contact-link {
   display: inline-block;
-  padding: 8px 16px;
-  background: var(--gradient-peach-orange);
-  color: var(--text-primary);
+  padding: 7px 16px;
+  background: var(--accent-muted);
+  color: var(--accent-hover);
   text-decoration: none;
   border-radius: var(--border-radius);
+  font-size: 0.85rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.2s ease;
+  border: 1px solid rgba(61, 79, 214, 0.25);
 }
 
 .contact-link:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  background: rgba(61, 79, 214, 0.25);
 }
-
-/* Contact Form - Removed */
 
 /* Availability Section */
 .availability-section {
   padding: 4rem 0;
-  background: rgba(253, 214, 181, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 
 .availability-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .availability-card {
-  background: white;
+  background: var(--bg-surface);
   padding: 2rem;
   border-radius: var(--border-radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(253, 214, 181, 0.1);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .availability-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  border-color: rgba(61, 79, 214, 0.4);
+  transform: translateY(-3px);
 }
 
 .availability-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .availability-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
   color: var(--text-primary);
 }
 
 .availability-card p {
-  color: var(--text-light);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .availability-status {
   display: inline-block;
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.06em;
 }
 
 .availability-status.available {
-  background: var(--gradient-green-aqua);
-  color: var(--text-primary);
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .availability-status.busy {
-  background: var(--gradient-peach-orange);
-  color: var(--text-primary);
+  background: rgba(234, 179, 8, 0.12);
+  color: #eab308;
+  border: 1px solid rgba(234, 179, 8, 0.3);
 }
 
 /* Quick Links Section */
 .quick-links-section {
   padding: 4rem 0;
-  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .quick-links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .quick-link-card {
-  background: white;
+  background: var(--bg-surface);
   padding: 2rem;
   border-radius: var(--border-radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   color: inherit;
-  border: 1px solid rgba(253, 214, 181, 0.1);
 }
 
 .quick-link-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(253, 214, 181, 0.3);
+  border-color: rgba(61, 79, 214, 0.4);
+  transform: translateY(-3px);
 }
 
 .quick-link-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .quick-link-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
 .quick-link-card p {
-  color: var(--text-light);
-  line-height: 1.6;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .page-title {
-    font-size: 2.5rem;
-  }
-
-  .page-subtitle {
-    font-size: 1rem;
-  }
-
-  .contact-content {
-    /* Single column layout for mobile */
-  }
-
-  .contact-info {
-    /* Contact info styling for mobile */
-  }
-
-  /* Contact form section removed */
-
   .contact-cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .availability-content {
@@ -280,24 +216,18 @@
   }
 
   .quick-links-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
-  .page-title {
-    font-size: 2rem;
+  .contact-cards {
+    grid-template-columns: 1fr;
   }
-
-  /* Contact form removed */
 
   .contact-card,
   .availability-card,
   .quick-link-card {
     padding: 1.5rem;
-  }
-
-  .contact-cards {
-    grid-template-columns: 1fr;
   }
 }

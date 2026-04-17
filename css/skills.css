@@ -1,51 +1,7 @@
 /* Skills Page Specific Styles */
 
-/* Page Header */
-.page-header {
-  background: var(--gradient-mint-lavender);
-  color: var(--text-primary);
-  padding: 8rem 0 4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.page-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(185,255,227,0.3)"/><circle cx="75" cy="75" r="1" fill="rgba(185,255,227,0.3)"/><circle cx="50" cy="10" r="0.5" fill="rgba(185,255,227,0.3)"/><circle cx="10" cy="60" r="0.5" fill="rgba(185,255,227,0.3)"/><circle cx="90" cy="40" r="0.5" fill="rgba(185,255,227,0.3)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.5;
-}
-
-.page-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
-  background: var(--gradient-purple-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.page-subtitle {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Skills Section */
 .skills-section {
   padding: var(--section-padding);
-  background: var(--bg-color);
 }
 
 .skills-category {
@@ -53,19 +9,18 @@
 }
 
 .category-title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
   margin-bottom: 2rem;
   text-align: center;
-  background: var(--gradient-mint-lavender);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -73,110 +28,88 @@
 
 /* Skill Circles */
 .skill-circle {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: bounce 3s ease-in-out infinite;
-  box-shadow: var(--shadow-md);
+  cursor: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: bounce 4s ease-in-out infinite;
+  border: 2px solid transparent;
 }
 
-/* Skill level background classes */
 .skill-circle.skill-expert {
-  background: var(--gradient-purple-blue);
+  background: rgba(61, 79, 214, 0.18);
+  border-color: var(--accent);
 }
 
 .skill-circle.skill-proficient {
-  background: var(--gradient-mint-lavender);
+  background: rgba(26, 106, 138, 0.18);
+  border-color: #1a6a8a;
 }
 
 .skill-circle.skill-intermediate {
-  background: var(--gradient-green-aqua);
+  background: rgba(90, 61, 140, 0.18);
+  border-color: #5a3d8c;
 }
 
 .skill-circle.skill-learning {
-  background: var(--gradient-peach-orange);
+  background: rgba(140, 90, 26, 0.18);
+  border-color: #8c5a1a;
 }
 
 .skill-circle:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 22px rgba(61, 79, 214, 0.28);
 }
 
 .skill-circle::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 50%;
-  background: var(--gradient-lime-sky);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.skill-circle:hover::before {
-  opacity: 1;
+  display: none;
 }
 
 .skill-text {
-  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-primary);
   text-align: center;
   line-height: 1.2;
   z-index: 1;
+  padding: 0 8px;
 }
 
-/* Bouncing Animation */
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
-/* Different animation delays for variety */
-.skill-circle:nth-child(1) {
-  animation-delay: 0s;
-}
-.skill-circle:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.skill-circle:nth-child(3) {
-  animation-delay: 0.4s;
-}
-.skill-circle:nth-child(4) {
-  animation-delay: 0.6s;
-}
-.skill-circle:nth-child(5) {
-  animation-delay: 0.8s;
-}
-.skill-circle:nth-child(6) {
-  animation-delay: 1s;
-}
+.skill-circle:nth-child(1) { animation-delay: 0s; }
+.skill-circle:nth-child(2) { animation-delay: 0.3s; }
+.skill-circle:nth-child(3) { animation-delay: 0.6s; }
+.skill-circle:nth-child(4) { animation-delay: 0.9s; }
+.skill-circle:nth-child(5) { animation-delay: 1.2s; }
+.skill-circle:nth-child(6) { animation-delay: 1.5s; }
 
 /* Skills Legend */
 .skills-legend {
-  background: rgba(185, 255, 227, 0.1);
   padding: 3rem 0;
-  border-top: 1px solid rgba(185, 255, 227, 0.2);
+  border-top: 1px solid var(--border-color);
+  background: transparent;
 }
 
 .legend-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 2rem;
   color: var(--text-primary);
@@ -187,7 +120,7 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -195,59 +128,57 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
+  font-family: "DM Sans", sans-serif;
 }
 
 .legend-circle {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   flex-shrink: 0;
+  border: 2px solid transparent;
 }
 
 .legend-circle.expert {
-  background: var(--gradient-purple-blue);
+  background: rgba(61, 79, 214, 0.18);
+  border-color: var(--accent);
 }
 
 .legend-circle.proficient {
-  background: var(--gradient-mint-lavender);
+  background: rgba(26, 106, 138, 0.18);
+  border-color: #1a6a8a;
 }
 
 .legend-circle.intermediate {
-  background: var(--gradient-green-aqua);
+  background: rgba(90, 61, 140, 0.18);
+  border-color: #5a3d8c;
 }
 
 .legend-circle.learning {
-  background: var(--gradient-peach-orange);
+  background: rgba(140, 90, 26, 0.18);
+  border-color: #8c5a1a;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .page-title {
-    font-size: 2.5rem;
-  }
-
-  .page-subtitle {
-    font-size: 1rem;
-  }
-
   .category-title {
     font-size: 1.5rem;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 1.5rem;
   }
 
   .skill-circle {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
   }
 
   .skill-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .legend-items {
@@ -258,18 +189,14 @@
 }
 
 @media (max-width: 480px) {
-  .page-title {
-    font-size: 2rem;
-  }
-
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
   .skill-circle {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
   }
 
   .skill-text {
