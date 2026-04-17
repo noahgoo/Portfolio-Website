@@ -1,205 +1,326 @@
-/* Skills Page Specific Styles */
+/* Skills Page — Terminal Style */
 
 .skills-section {
   padding: var(--section-padding);
 }
 
-.skills-category {
-  margin-bottom: 4rem;
-}
-
-.category-title {
-  font-family: "Instrument Serif", serif;
-  font-size: 1.75rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
+/* Terminal Window */
+.terminal-window {
+  max-width: 860px;
   margin: 0 auto;
+  background: #080809;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
 }
 
-/* Skill Circles */
-.skill-circle {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
+.terminal-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  position: relative;
-  cursor: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: bounce 4s ease-in-out infinite;
-  border: 2px solid transparent;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  background: #111113;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.skill-circle.skill-expert {
-  background: rgba(61, 79, 214, 0.18);
-  border-color: var(--accent);
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
-.skill-circle.skill-proficient {
-  background: rgba(26, 106, 138, 0.18);
-  border-color: #1a6a8a;
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
-.skill-circle.skill-intermediate {
-  background: rgba(90, 61, 140, 0.18);
-  border-color: #5a3d8c;
-}
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green  { background: #28c840; }
 
-.skill-circle.skill-learning {
-  background: rgba(140, 90, 26, 0.18);
-  border-color: #8c5a1a;
-}
-
-.skill-circle:hover {
-  transform: scale(1.08) !important;
-  box-shadow: 0 0 22px rgba(61, 79, 214, 0.28);
-}
-
-.skill-circle::before {
-  display: none;
-}
-
-.skill-text {
-  font-family: "DM Sans", sans-serif;
+.terminal-filename {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  text-align: center;
-  line-height: 1.2;
-  z-index: 1;
-  padding: 0 8px;
+  color: var(--text-secondary);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@keyframes bounce {
-  0%,
-  100% {
+.terminal-lang {
+  font-family: ui-monospace, monospace;
+  font-size: 0.7rem;
+  color: var(--text-light);
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 1.5rem 0 2rem;
+  overflow-x: auto;
+}
+
+/* Code Lines */
+.code-line {
+  display: flex;
+  align-items: baseline;
+  min-height: 1.55em;
+  padding: 0.05em 1.5rem;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(3px);
+  animation: lineReveal 0.25s ease forwards;
+}
+
+@keyframes lineReveal {
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-8px);
-  }
 }
 
-.skill-circle:nth-child(1) { animation-delay: 0s; }
-.skill-circle:nth-child(2) { animation-delay: 0.3s; }
-.skill-circle:nth-child(3) { animation-delay: 0.6s; }
-.skill-circle:nth-child(4) { animation-delay: 0.9s; }
-.skill-circle:nth-child(5) { animation-delay: 1.2s; }
-.skill-circle:nth-child(6) { animation-delay: 1.5s; }
-
-/* Skills Legend */
-.skills-legend {
-  padding: 3rem 0;
-  border-top: 1px solid var(--border-color);
-  background: transparent;
+.line-number {
+  width: 2.5rem;
+  min-width: 2.5rem;
+  color: #2e2e36;
+  text-align: right;
+  padding-right: 1.5rem;
+  user-select: none;
+  font-size: 0.75rem;
+  flex-shrink: 0;
 }
 
-.legend-title {
-  font-family: "Instrument Serif", serif;
-  font-size: 1.25rem;
-  font-weight: 400;
+.line-content {
+  flex: 1;
+  white-space: pre;
+}
+
+/* Syntax tokens */
+.tok-keyword      { color: #c084fc; }
+.tok-varname      { color: var(--text-primary); }
+.tok-key          { color: #7dd3fc; }
+.tok-punct        { color: #555563; }
+.tok-comment      { color: #3d3d48; font-style: italic; }
+
+.tok-level-proficient   { color: #4ade80; }
+.tok-level-intermediate { color: #fbbf24; }
+.tok-level-learning     { color: #64748b; }
+
+/* Skill names — clickable strings */
+.tok-skill {
+  color: #c8c3ba;
+  cursor: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tok-skill:hover {
+  color: var(--accent-hover);
+  border-bottom-color: rgba(84, 104, 240, 0.5);
+}
+
+/* Blinking cursor */
+.cursor-blink {
+  display: inline-block;
+  width: 7px;
+  height: 0.9em;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  animation: blink 1.2s step-end infinite;
+  border-radius: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Hint */
+.terminal-hint {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 1.25rem;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Skill Modal — Dark */
+.skill-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: modalIn 0.18s ease;
+}
+
+.skill-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.skill-modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  max-width: 460px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.7);
+}
+
+.skill-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skill-modal-header h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.skill-modal-close {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  cursor: none;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.skill-modal-close:hover {
+  border-color: var(--accent);
   color: var(--text-primary);
 }
 
-.legend-items {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+.level-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
   font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
 }
 
-.legend-circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  border: 2px solid transparent;
+.level-badge.proficient {
+  background: rgba(74, 222, 128, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.28);
 }
 
-.legend-circle.expert {
-  background: rgba(61, 79, 214, 0.18);
-  border-color: var(--accent);
+.level-badge.intermediate {
+  background: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.28);
 }
 
-.legend-circle.proficient {
-  background: rgba(26, 106, 138, 0.18);
-  border-color: #1a6a8a;
+.level-badge.learning {
+  background: rgba(100, 116, 139, 0.1);
+  color: #94a3b8;
+  border: 1px solid rgba(100, 116, 139, 0.28);
 }
 
-.legend-circle.intermediate {
-  background: rgba(90, 61, 140, 0.18);
-  border-color: #5a3d8c;
+.skill-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
 }
 
-.legend-circle.learning {
-  background: rgba(140, 90, 26, 0.18);
-  border-color: #8c5a1a;
+.skill-projects h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.skill-projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-projects li {
+  font-size: 0.875rem;
+  padding: 0.4rem 0 0.4rem 1.25rem;
+  color: var(--text-secondary);
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skill-projects li:last-child {
+  border-bottom: none;
+}
+
+.skill-projects li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes modalOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.96); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .category-title {
-    font-size: 1.5rem;
-  }
+  .terminal-window { border-radius: 8px; }
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .skill-circle {
-    width: 95px;
-    height: 95px;
-  }
-
-  .skill-text {
+  .code-line {
     font-size: 0.75rem;
+    padding: 0.05em 1rem;
   }
 
-  .legend-items {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .line-number {
+    width: 2rem;
+    min-width: 2rem;
+    padding-right: 1rem;
   }
+
+  .terminal-filename { display: none; }
 }
 
 @media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .skill-circle {
-    width: 85px;
-    height: 85px;
-  }
-
-  .skill-text {
-    font-size: 0.7rem;
-  }
+  .code-line { font-size: 0.65rem; }
 }
