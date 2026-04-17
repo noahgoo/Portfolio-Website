@@ -59,6 +59,8 @@
 .terminal-body {
   padding: 1.5rem 0 2rem;
   overflow-x: auto;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Code Lines */
@@ -303,24 +305,83 @@
   to   { opacity: 0; transform: scale(0.96); }
 }
 
+/* Mobile Card View */
+.skills-mobile {
+  display: none;
+}
+
+.skill-cat-block {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: var(--bg-surface);
+}
+
+.skill-cat-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0.65rem 1rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-color);
+  margin: 0;
+}
+
+.skill-level-row {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-level-row:last-child {
+  border-bottom: none;
+}
+
+.skill-level-label {
+  font-family: ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-pill {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+
+.skill-pill:active {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .terminal-window { border-radius: 8px; }
-
-  .code-line {
-    font-size: 0.75rem;
-    padding: 0.05em 1rem;
-  }
-
-  .line-number {
-    width: 2rem;
-    min-width: 2rem;
-    padding-right: 1rem;
-  }
-
-  .terminal-filename { display: none; }
+  .terminal-window { display: none; }
+  .skills-mobile { display: block; }
 }
 
 @media (max-width: 480px) {
-  .code-line { font-size: 0.65rem; }
+  .code-line {
+    font-size: 0.72rem;
+    padding: 0.05em 0.75rem;
+  }
 }

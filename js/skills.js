@@ -566,4 +566,65 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.addEventListener("keydown", onKey);
   }
+
+  // Mobile card view — CSS shows/hides based on breakpoint
+  const mobileContainer = document.getElementById("skills-mobile");
+  if (mobileContainer) {
+    const CAT_LABELS = {
+      languages: "Languages", web: "Web", hardware: "Hardware",
+      tools: "Tools", databases: "Databases",
+    };
+    const LEVEL_LABELS = {
+      proficient: "Proficient", intermediate: "Intermediate", learning: "Learning",
+    };
+
+    SKILL_CATEGORIES.forEach((cat) => {
+      const block = document.createElement("div");
+      block.className = "skill-cat-block";
+
+      const heading = document.createElement("div");
+      heading.className = "skill-cat-heading";
+      heading.textContent = CAT_LABELS[cat.key] || cat.key;
+      block.appendChild(heading);
+
+      const groups = {};
+      cat.skills.forEach((s) => {
+        if (!groups[s.level]) groups[s.level] = [];
+        groups[s.level].push(s);
+      });
+
+      ["proficient", "intermediate", "learning"].forEach((level) => {
+        if (!groups[level]) return;
+        const row = document.createElement("div");
+        row.className = "skill-level-row";
+
+        const label = document.createElement("span");
+        label.className = `skill-level-label tok-level-${level}`;
+        label.textContent = LEVEL_LABELS[level];
+        row.appendChild(label);
+
+        const pills = document.createElement("div");
+        pills.className = "skill-pills";
+        groups[level].forEach((s) => {
+          const pill = document.createElement("span");
+          pill.className = "skill-pill tok-skill";
+          pill.dataset.skill = s.name;
+          pill.textContent = s.name;
+          pills.appendChild(pill);
+        });
+        row.appendChild(pills);
+        block.appendChild(row);
+      });
+
+      mobileContainer.appendChild(block);
+    });
+
+    mobileContainer.addEventListener("click", (e) => {
+      const skill = e.target.closest(".tok-skill");
+      if (skill) showSkillModal(skill.dataset.skill);
+    });
+
+    const hint = document.getElementById("skills-hint");
+    if (hint && window.innerWidth < 768) hint.textContent = "Tap any skill to learn more";
+  }
 });
