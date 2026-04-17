@@ -502,25 +502,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Cursor ring grows on cards (mirrors main.js behavior)
-  const cursorDot = document.querySelector(".cursor-dot");
-  const cursorRing = document.querySelector(".cursor-ring");
-  if (cursorDot && cursorRing) {
-    grid.addEventListener("mouseover", (e) => {
-      if (e.target.closest(".project-card")) {
-        cursorDot.style.opacity = "0";
-        cursorRing.style.width = "48px";
-        cursorRing.style.height = "48px";
-        cursorRing.style.borderColor = "rgba(61, 79, 214, 0.7)";
-      }
-    });
-    grid.addEventListener("mouseout", (e) => {
-      if (e.target.closest(".project-card")) {
-        cursorDot.style.opacity = "1";
-        cursorRing.style.width = "32px";
-        cursorRing.style.height = "32px";
-        cursorRing.style.borderColor = "rgba(61, 79, 214, 0.45)";
-      }
-    });
-  }
 });

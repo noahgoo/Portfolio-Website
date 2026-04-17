@@ -1,51 +1,33 @@
 // Main JavaScript for Portfolio Website
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Custom cursor
-  const cursorDot = document.createElement("div");
-  cursorDot.className = "cursor-dot";
-  const cursorRing = document.createElement("div");
-  cursorRing.className = "cursor-ring";
-  document.body.appendChild(cursorDot);
-  document.body.appendChild(cursorRing);
-
-  let mouseX = 0,
-    mouseY = 0;
-  let ringX = 0,
-    ringY = 0;
+  // Custom cursor — crosshair
+  const crossH = document.createElement("div");
+  crossH.className = "cursor-cross-h";
+  const crossV = document.createElement("div");
+  crossV.className = "cursor-cross-v";
+  document.body.appendChild(crossH);
+  document.body.appendChild(crossV);
 
   document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorDot.style.left = mouseX + "px";
-    cursorDot.style.top = mouseY + "px";
+    crossH.style.left = e.clientX + "px";
+    crossH.style.top = e.clientY + "px";
+    crossV.style.left = e.clientX + "px";
+    crossV.style.top = e.clientY + "px";
   });
 
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    cursorRing.style.left = ringX + "px";
-    cursorRing.style.top = ringY + "px";
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  // Grow ring on interactive elements
+  // Expand crosshair on interactive elements
   const interactiveSelector =
     "a, button, .project-card, .skill-circle, .mission-card, .contact-card, .quick-link-card, .interest-item, .availability-card";
 
   document.querySelectorAll(interactiveSelector).forEach((el) => {
     el.addEventListener("mouseenter", () => {
-      cursorDot.style.opacity = "0";
-      cursorRing.style.width = "48px";
-      cursorRing.style.height = "48px";
-      cursorRing.style.borderColor = "rgba(61, 79, 214, 0.7)";
+      crossH.classList.add("expanded");
+      crossV.classList.add("expanded");
     });
     el.addEventListener("mouseleave", () => {
-      cursorDot.style.opacity = "1";
-      cursorRing.style.width = "32px";
-      cursorRing.style.height = "32px";
-      cursorRing.style.borderColor = "rgba(61, 79, 214, 0.45)";
+      crossH.classList.remove("expanded");
+      crossV.classList.remove("expanded");
     });
   });
 
