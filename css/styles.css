@@ -254,6 +254,21 @@ h4 {
 }
 
 /* Page Headers (inner pages) */
+@keyframes wipeUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+@keyframes wipeDown {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+
+@keyframes headerFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .page-header {
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
@@ -263,6 +278,28 @@ h4 {
   overflow: hidden;
 }
 
+.page-header::before,
+.page-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 51%;
+  background: var(--bg-color);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.page-header::before {
+  top: 0;
+  animation: wipeUp 0.75s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
+}
+
+.page-header::after {
+  bottom: 0;
+  animation: wipeDown 0.75s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
+}
+
 .page-title {
   font-family: "Instrument Serif", serif;
   font-size: 3.5rem;
@@ -270,6 +307,7 @@ h4 {
   color: var(--text-primary);
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
+  animation: headerFadeIn 0.3s ease 0.55s both;
 }
 
 .page-subtitle {
@@ -278,6 +316,7 @@ h4 {
   max-width: 560px;
   margin: 0 auto;
   font-family: "DM Sans", sans-serif;
+  animation: headerFadeIn 0.4s ease 0.75s both;
 }
 
 /* Footer */
