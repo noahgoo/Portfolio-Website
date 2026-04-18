@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,11 +11,19 @@
       rel="stylesheet"
     />
     <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script>
-      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+      window.si =
+        window.si ||
+        function () {
+          (window.siq = window.siq || []).push(arguments);
+        };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
   </head>
@@ -74,98 +82,71 @@
     <section class="featured-projects">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-          <div
-            class="project-card"
-            data-href="projects.html#project1"
-          >
-            <div class="project-image">
+        <div class="bento-grid">
+          <!-- AnkiEx — tall left -->
+          <a href="projects.html" class="bento-cell bento-ankiex">
+            <div class="bento-bg"></div>
+            <span class="bento-num">01</span>
+            <div class="bento-img-wrap">
+              <img src="assets/images/anki-ex-startup.png" alt="AnkiEx" />
+            </div>
+            <div class="bento-content">
+              <span class="bento-cat">AI · Startup</span>
+              <h3 class="bento-title">AnkiEx</h3>
+              <p class="bento-desc">
+                macOS extension that generates Anki flashcards from highlighted
+                text using AI. Highlight anything, hit a shortcut, get cards
+                instantly.
+              </p>
+              <div class="bento-tags">
+                <span>Swift</span><span>JavaScript</span><span>Supabase</span>
+              </div>
+            </div>
+            <span class="bento-arrow">→</span>
+          </a>
+
+          <!-- Chess — top right -->
+          <a href="projects.html" class="bento-cell bento-chess">
+            <div class="bento-bg"></div>
+            <span class="bento-num">02</span>
+            <div class="bento-img-wrap">
+              <img src="assets/images/project_chess.png" alt="Chess Game" />
+            </div>
+            <div class="bento-content">
+              <span class="bento-cat">Software</span>
+              <h3 class="bento-title">Chess Game</h3>
+              <p class="bento-desc">
+                Full stack multiplayer chess with terminal GUI and client-server
+                architecture.
+              </p>
+              <div class="bento-tags"><span>Java</span><span>MySQL</span></div>
+            </div>
+            <span class="bento-arrow">→</span>
+          </a>
+
+          <!-- Laser Tag — bottom right -->
+          <a href="projects.html" class="bento-cell bento-laser">
+            <div class="bento-bg"></div>
+            <span class="bento-num">03</span>
+            <div class="bento-img-wrap">
               <img
-                src="assets/images/project_aiyu_website.png"
-                alt="AIYU Website Project"
-                class="project-img"
+                src="assets/images/project_laser_tag.png"
+                alt="Laser Tag Unit"
               />
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Aiyu Swimwear Website</h3>
-              <p class="project-description">
-                Full stack e-commerce website for a startupswimwear brand.
+            <div class="bento-content">
+              <span class="bento-cat">Hardware · ECEN</span>
+              <h3 class="bento-title">Laser Tag Unit</h3>
+              <p class="bento-desc">
+                Custom IR transmitter and receiver built for embedded systems
+                class. Hit detection, scoring, and game state display.
               </p>
-              <div class="project-tags">
-                <span class="tag">Next.js</span>
-                <span class="tag">Stripe</span>
-                <span class="tag">Tailwind CSS</span>
+              <div class="bento-tags">
+                <span>C</span><span>Embedded Systems</span><span>IR Comm</span>
               </div>
             </div>
-          </div>
-
-          <div
-            class="project-card"
-            data-href="projects.html#project2"
-          >
-            <div class="project-image">
-              <img
-                src="assets/images/project_chess.png"
-                alt="Chess Game Project"
-                class="project-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Chess Game</h3>
-              <p class="project-description">
-                Full stack chess game built with terminal GUI and Java.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Java</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">Git Version Control</span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="project-card"
-            data-href="projects.html#project9"
-          >
-            <div class="project-image">
-              <img
-                src="assets/images/anki-ex-startup.png"
-                alt="AnkiEx"
-                class="project-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">AnkiEx (Startup)</h3>
-              <p class="project-description">
-                macOS menu bar application that allows users to create AI
-                powered flashcards for Anki using a keyboard shortcut.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Swift</span>
-                <span class="tag">Supabase</span>
-                <span class="tag">JavaScript</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div
-            class="project-card"
-            onclick="window.location.href='projects.html#project4'"
-          >
-            <div class="project-image">
-              <div class="project-placeholder">Project 4</div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Project Title 4</h3>
-              <p class="project-description">
-                Brief description of the project and technologies used.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Verilog</span>
-                <span class="tag">FPGA</span>
-              </div>
-            </div>
-          </div> -->
+            <span class="bento-arrow">→</span>
+          </a>
         </div>
         <div class="view-all-projects">
           <a href="projects.html" class="btn btn-outline">View All Projects</a>
