@@ -135,52 +135,21 @@ document.addEventListener("DOMContentLoaded", function () {
     content.appendChild(closeBtn);
     notification.appendChild(content);
 
-    notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: ${
-        type === "success"
-          ? "#22c55e"
-          : type === "error"
-            ? "#ef4444"
-            : "#3d4fd6"
-      };
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      z-index: 10000;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      max-width: 380px;
-      font-family: "DM Sans", sans-serif;
-      font-size: 0.875rem;
-    `;
-
     document.body.appendChild(notification);
 
     setTimeout(() => {
-      notification.style.transform = "translateX(0)";
+      notification.style.transform = "translate(-50%, 0)";
     }, 100);
 
-    closeBtn.addEventListener("click", () => {
-      notification.style.transform = "translateX(100%)";
+    function dismiss() {
+      notification.style.transform = "translate(-50%, calc(100% + 32px))";
       setTimeout(() => {
-        document.body.removeChild(notification);
+        if (document.body.contains(notification)) document.body.removeChild(notification);
       }, 300);
-    });
+    }
 
-    setTimeout(() => {
-      if (document.body.contains(notification)) {
-        notification.style.transform = "translateX(100%)";
-        setTimeout(() => {
-          if (document.body.contains(notification)) {
-            document.body.removeChild(notification);
-          }
-        }, 300);
-      }
-    }, 5000);
+    closeBtn.addEventListener("click", dismiss);
+    setTimeout(dismiss, 5000);
   }
 
   // Project card click handlers

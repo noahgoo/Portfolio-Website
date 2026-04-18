@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (emailLink) {
     emailLink.addEventListener("click", function (e) {
       e.preventDefault();
-      const email = this.textContent;
+      const email = this.href.replace("mailto:", "");
 
       // Copy email to clipboard
       navigator.clipboard
@@ -104,57 +104,21 @@ document.addEventListener("DOMContentLoaded", function () {
       content.appendChild(messageSpan);
       content.appendChild(closeBtn);
       notification.appendChild(content);
-
-      // Add styles
-      notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: ${
-                  type === "success"
-                    ? "#10B981"
-                    : type === "error"
-                      ? "#EF4444"
-                      : "#3B82F6"
-                };
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                z-index: 10000;
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-                max-width: 400px;
-            `;
-
       document.body.appendChild(notification);
 
-      // Animate in
       setTimeout(() => {
-        notification.style.transform = "translateX(0)";
+        notification.style.transform = "translate(-50%, 0)";
       }, 100);
 
-      // Close button functionality
-      closeBtn.addEventListener("click", () => {
-        notification.style.transform = "translateX(100%)";
+      function dismiss() {
+        notification.style.transform = "translate(-50%, calc(100% + 32px))";
         setTimeout(() => {
-          if (document.body.contains(notification)) {
-            document.body.removeChild(notification);
-          }
+          if (document.body.contains(notification)) document.body.removeChild(notification);
         }, 300);
-      });
+      }
 
-      // Auto remove after 5 seconds
-      setTimeout(() => {
-        if (document.body.contains(notification)) {
-          notification.style.transform = "translateX(100%)";
-          setTimeout(() => {
-            if (document.body.contains(notification)) {
-              document.body.removeChild(notification);
-            }
-          }, 300);
-        }
-      }, 5000);
+      closeBtn.addEventListener("click", dismiss);
+      setTimeout(dismiss, 5000);
     };
   }
 });
