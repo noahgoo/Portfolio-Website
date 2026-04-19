@@ -2,6 +2,7 @@
 
 .skills-section {
   padding: var(--section-padding);
+  padding-top: calc(60px + 3rem);
 }
 
 /* Terminal Window */

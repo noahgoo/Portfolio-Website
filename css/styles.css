@@ -253,70 +253,26 @@ h4 {
   letter-spacing: 0;
 }
 
-/* Page Headers (inner pages) */
-@keyframes wipeUp {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-100%); }
+/* Section page title (replaces page-header) */
+.section-header {
+  margin-bottom: 2.5rem;
 }
 
-@keyframes wipeDown {
-  from { transform: translateY(0); }
-  to   { transform: translateY(100%); }
-}
-
-@keyframes headerFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.page-header {
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border-color);
-  padding: 8rem 0 4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.page-header::before,
-.page-header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 51%;
-  background: var(--bg-color);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.page-header::before {
-  top: 0;
-  animation: wipeUp 0.75s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
-}
-
-.page-header::after {
-  bottom: 0;
-  animation: wipeDown 0.75s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
-}
-
-.page-title {
+.section-page-title {
   font-family: "Instrument Serif", serif;
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   color: var(--text-primary);
-  margin-bottom: 1rem;
   letter-spacing: -0.03em;
-  animation: headerFadeIn 0.3s ease 0.55s both;
+  line-height: 1;
+  margin-bottom: 0.6rem;
 }
 
-.page-subtitle {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  max-width: 560px;
-  margin: 0 auto;
+.section-page-sub {
   font-family: "DM Sans", sans-serif;
-  animation: headerFadeIn 0.4s ease 0.75s both;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
 /* Footer */

@@ -262,6 +262,7 @@
   .profile-split-photo img {
     aspect-ratio: 4 / 3;
     max-height: 340px;
+    object-position: center 40%;
   }
 
   .profile-stats {
