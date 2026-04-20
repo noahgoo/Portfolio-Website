@@ -330,8 +330,14 @@ const PROJECTS = [
       "Hardware collision detection",
       "Score tracking",
     ],
-    links: [{ label: "Demo Unavailable", href: "#", style: "primary" }],
-    href: "#",
+    links: [
+      {
+        label: "View Demo",
+        href: "https://youtu.be/vnM2SgINZ18?si=4kTL2nftnHlf8Q0Z",
+        style: "primary",
+      },
+    ],
+    href: "https://youtu.be/vnM2SgINZ18?si=4kTL2nftnHlf8Q0Z",
   },
   {
     number: "14",
