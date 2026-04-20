@@ -72,11 +72,11 @@ const PROJECTS = [
     image: "assets/images/project_laser_tag.png",
     imageClass: "",
     imageStyle: "",
-    tags: ["C", "Embedded Systems", "IR Communication"],
+    tags: ["C", "Embedded Systems", "MATLAB", "PCB Design"],
     description:
-      "Laser tag unit built for an embedded systems course. Custom hardware with IR transmitter and receiver for tagging opponents and tracking hits.",
+      "Laser tag unit built during junior year courses. Custom analog circuit for filtering and receiving signals. C programming for ESP32 functionality.",
     features: [
-      "IR shot transmission and detection",
+      "FIR and IIR signal filtering",
       "Hit tracking and scoring",
       "Custom PCB and wiring",
       "Game state display",
@@ -143,11 +143,10 @@ const PROJECTS = [
       "macOS app implementing the 20/20/20 rule. Every 20 minutes it reminds you to look at something 20 feet away for 20 seconds to reduce eye strain.",
     features: [
       "20-minute interval reminders",
-      "Desktop system notifications",
+      "macOS overlay with skip option",
       "Lightweight background process",
     ],
     links: [
-      { label: "Demo Unavailable", href: "#", style: "primary" },
       {
         label: "View GitHub",
         href: "https://github.com/noahgoo/eye",
@@ -199,7 +198,6 @@ const PROJECTS = [
       "CI/CD via GitHub Actions",
     ],
     links: [
-      { label: "Demo Unavailable", href: "#", style: "primary" },
       {
         label: "View GitHub",
         href: "https://github.com/noahgoo/ByteReels",
@@ -521,5 +519,4 @@ document.addEventListener("DOMContentLoaded", function () {
       card.classList.toggle("hidden", !match);
     });
   });
-
 });

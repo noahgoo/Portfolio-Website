@@ -13,7 +13,7 @@ const SKILL_CATEGORIES = [
         level: "proficient",
         description:
           "First language learned. Used in scripting, data processing, and building applications.",
-        projects: ["Datalog Interpreter", "Religion Project"],
+        projects: ["Datalog Interpreter", "20/20/20 Eye Break App"],
       },
       {
         name: "C/C++",
@@ -25,6 +25,7 @@ const SKILL_CATEGORIES = [
           "Smart Weather Station",
           "Smart Doorbell",
           "Arduino Light Following Robot",
+          "Laser Tag Unit",
         ],
       },
       {
@@ -38,24 +39,26 @@ const SKILL_CATEGORIES = [
         name: "SQL",
         level: "intermediate",
         description: "Used in building databases and data analysis.",
-        projects: ["Chess Game", "CFA Workflow Tracker"],
+        projects: ["Chess Game"],
       },
       {
         name: "JavaScript",
         level: "intermediate",
         description:
           "Frontend and backend development with React and Firebase.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+        projects: [
+          "Portfolio Website",
+          "MasteryLoop",
+          "ByteReels",
+          "CFA Workflow Tracker",
+          "AnkiEx (Startup)",
+        ],
       },
       {
         name: "TypeScript",
         level: "intermediate",
         description: "Used in building web applications with React/Next.js.",
-        projects: [
-          "Portfolio Website",
-          "CFA Workflow Tracker",
-          "Aiyu Swimwear Website",
-        ],
+        projects: ["Aiyu Swimwear Website", "ByteReels"],
       },
       {
         name: "Swift",
@@ -68,14 +71,14 @@ const SKILL_CATEGORIES = [
         level: "intermediate",
         description:
           "Used in digital design, RTL modeling, and hardware description for coursework.",
-        projects: ["Digital Design Course"],
+        projects: ["FPGA Pong"],
       },
       {
         name: "Assembly",
         level: "learning",
         description:
           "Low-level programming covered in computer architecture coursework.",
-        projects: ["Computer Architecture Course"],
+        projects: ["Intro to Computer Systems Course"],
       },
     ],
   },
@@ -86,38 +89,34 @@ const SKILL_CATEGORIES = [
         name: "React",
         level: "intermediate",
         description: "Building responsive and interactive user interfaces.",
-        projects: ["CFA Workflow Tracker"],
+        projects: ["CFA Workflow Tracker", "MasteryLoop", "ByteReels"],
       },
       {
         name: "Next.js",
         level: "intermediate",
         description: "Used in building full-stack web applications.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+        projects: ["Aiyu Swimwear Website"],
       },
       {
         name: "HTML/CSS",
         level: "intermediate",
         description:
           "Used in building and styling interactive user interfaces and web applications.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+        projects: ["Portfolio Website"],
       },
       {
         name: "Tailwind CSS",
         level: "intermediate",
         description:
           "Used in building responsive and interactive user interfaces.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+        projects: ["Aiyu Swimwear Website", "ByteReels", "MasteryLoop"],
       },
       {
         name: "Node.js",
         level: "intermediate",
         description:
           "Used as the runtime for Next.js backends and server-side scripting.",
-        projects: [
-          "Portfolio Website",
-          "Aiyu Swimwear Website",
-          "CFA Workflow Tracker",
-        ],
+        projects: ["MasteryLoop", "CFA Workflow Tracker"],
       },
       {
         name: "Stripe",
@@ -164,6 +163,7 @@ const SKILL_CATEGORIES = [
           "Smart Doorbell",
           "Arduino Light Following Robot",
           "Mini Security System",
+          "Laser Tag Unit",
         ],
       },
       {
@@ -175,13 +175,14 @@ const SKILL_CATEGORIES = [
           "Smart Weather Station",
           "Mini Security System",
           "Arduino Light Following Robot",
+          "Laser Tag Unit",
         ],
       },
       {
         name: "Breadboard & Soldering",
         level: "intermediate",
         description: "Used in building systems with Arduino.",
-        projects: ["Arduino Light Following Robot"],
+        projects: ["Arduino Light Following Robot", "Laser Tag Unit"],
       },
     ],
   },
@@ -192,12 +193,12 @@ const SKILL_CATEGORIES = [
         name: "Git",
         level: "proficient",
         description:
-          "Regular use across projects. Comfortable with CLI and branches for version control and collaborative workflows.",
+          "Regular use across almost all projects. Comfortable with CLI and branches for version control and collaborative workflows.",
         projects: [
           "Aiyu Swimwear Website",
           "Chess Game",
           "Portfolio Website",
-          "CFA Workflow Tracker",
+          "AnkiEx (Startup)",
         ],
       },
       {
@@ -209,7 +210,7 @@ const SKILL_CATEGORIES = [
           "Aiyu Swimwear Website",
           "Chess Game",
           "Portfolio Website",
-          "CFA Workflow Tracker",
+          "AnkiEx (Startup)",
         ],
       },
       {
@@ -220,16 +221,20 @@ const SKILL_CATEGORIES = [
           "CFA Workflow Tracker",
           "Budgeting App",
           "Aiyu Swimwear Website",
+          "20/20/20 Eye Break App",
         ],
       },
       {
         name: "Claude Code",
         level: "proficient",
-        description: "Used in building web applications and mobile apps.",
+        description:
+          "Used in building various projects such as web applications and mobile apps.",
         projects: [
           "Portfolio Website",
           "CFA Workflow Tracker",
           "Aiyu Swimwear Website",
+          "20/20/20 Eye Break App",
+          "AnkiEx (Startup)",
         ],
       },
       {
@@ -237,14 +242,14 @@ const SKILL_CATEGORIES = [
         level: "intermediate",
         description:
           "Used to deploy and host web applications with CI/CD from GitHub.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+        projects: ["Portfolio Website", "Aiyu Swimwear Website", "ByteReels"],
       },
       {
         name: "Terminal",
         level: "intermediate",
         description:
           "Daily use for Git, package managers, running scripts, and navigating projects.",
-        projects: ["Chess Game", "Portfolio Website", "CFA Workflow Tracker"],
+        projects: ["Chess Game", "Portfolio Website", "AnkiEx (Startup)"],
       },
       {
         name: "Xcode",
@@ -257,37 +262,37 @@ const SKILL_CATEGORIES = [
         level: "intermediate",
         description:
           "Used for unit and integration testing across web projects.",
-        projects: ["Portfolio Website", "CFA Workflow Tracker"],
+        projects: ["ByteReels"],
       },
       {
         name: "Docker",
         level: "learning",
         description: "Used in containerization and deployment automation.",
-        projects: ["Flashcard Automation"],
+        projects: [],
       },
       {
         name: "Autodesk Fusion",
         level: "learning",
         description: "Used in building 3D models for printing.",
-        projects: ["Arduino Light Following Robot"],
+        projects: ["Arduino Light Following Robot", "Laser Tag Unit"],
       },
       {
         name: "MATLAB",
         level: "learning",
         description: "Used in simulations and data analysis.",
-        projects: ["Signals & Systems Course"],
+        projects: ["Signals & Systems Course", "Laser Tag Unit"],
       },
       {
         name: "KiCad",
         level: "learning",
         description: "Used in building PCB designs.",
-        projects: ["Laser Tag Project"],
+        projects: ["Laser Tag Unit"],
       },
       {
         name: "AWS",
         level: "learning",
         description: "Used in cloud computing and hosting services.",
-        projects: ["Flashcard Automation"],
+        projects: ["MasteryLoop"],
       },
     ],
   },
@@ -299,19 +304,19 @@ const SKILL_CATEGORIES = [
         level: "proficient",
         description:
           "Used for authentication, Firestore database, and hosting across multiple projects.",
-        projects: ["CFA Workflow Tracker", "Budgeting App"],
+        projects: ["CFA Workflow Tracker"],
       },
       {
         name: "Supabase",
         level: "learning",
         description: "Used as backend database and auth provider.",
-        projects: ["AnkiEx (Startup)"],
+        projects: ["AnkiEx (Startup)", "Aiyu Swimwear Website"],
       },
       {
         name: "MongoDB",
         level: "learning",
         description: "Used in building full-stack web applications.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website"],
+        projects: ["MasteryLoop"],
       },
     ],
   },
@@ -571,11 +576,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileContainer = document.getElementById("skills-mobile");
   if (mobileContainer) {
     const CAT_LABELS = {
-      languages: "Languages", web: "Web", hardware: "Hardware",
-      tools: "Tools", databases: "Databases",
+      languages: "Languages",
+      web: "Web",
+      hardware: "Hardware",
+      tools: "Tools",
+      databases: "Databases",
     };
     const LEVEL_LABELS = {
-      proficient: "Proficient", intermediate: "Intermediate", learning: "Learning",
+      proficient: "Proficient",
+      intermediate: "Intermediate",
+      learning: "Learning",
     };
 
     SKILL_CATEGORIES.forEach((cat) => {
@@ -625,6 +635,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const hint = document.getElementById("skills-hint");
-    if (hint && window.innerWidth < 768) hint.textContent = "Tap any skill to learn more";
+    if (hint && window.innerWidth < 768)
+      hint.textContent = "Tap any skill to learn more";
   }
 });
