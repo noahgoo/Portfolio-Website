@@ -179,6 +179,13 @@ const SKILL_CATEGORIES = [
         ],
       },
       {
+        name: "ESP32",
+        level: "intermediate",
+        description:
+          "Used in school projects and senior Capstone to build an MQTT broker on a ESP32-P4 microcontroller.",
+        projects: ["Capstone Project", "Laser Tag Unit"],
+      },
+      {
         name: "Breadboard & Soldering",
         level: "intermediate",
         description: "Used in building systems with Arduino.",
