@@ -51,20 +51,20 @@ const SKILL_CATEGORIES = [
           "MasteryLoop",
           "ByteReels",
           "CFA Workflow Tracker",
-          "AnkiEx (Startup)",
+          "Mneme (Startup)",
         ],
       },
       {
         name: "TypeScript",
         level: "intermediate",
         description: "Used in building web applications with React/Next.js.",
-        projects: ["Aiyu Swimwear Website", "ByteReels"],
+        projects: ["Aiyu Swimwear Website", "ByteReels", "Learn LLM", "Momentum"],
       },
       {
         name: "Swift",
         level: "learning",
         description: "Used in building macOS menu bar applications.",
-        projects: ["AnkiEx (Startup)"],
+        projects: ["Mneme (Startup)"],
       },
       {
         name: "SystemVerilog",
@@ -89,13 +89,13 @@ const SKILL_CATEGORIES = [
         name: "React",
         level: "intermediate",
         description: "Building responsive and interactive user interfaces.",
-        projects: ["CFA Workflow Tracker", "MasteryLoop", "ByteReels"],
+        projects: ["CFA Workflow Tracker", "MasteryLoop", "ByteReels", "Learn LLM", "Momentum"],
       },
       {
         name: "Next.js",
         level: "intermediate",
         description: "Used in building full-stack web applications.",
-        projects: ["Aiyu Swimwear Website"],
+        projects: ["Aiyu Swimwear Website", "Learn LLM"],
       },
       {
         name: "HTML/CSS",
@@ -109,7 +109,7 @@ const SKILL_CATEGORIES = [
         level: "intermediate",
         description:
           "Used in building responsive and interactive user interfaces.",
-        projects: ["Aiyu Swimwear Website", "ByteReels", "MasteryLoop"],
+        projects: ["Aiyu Swimwear Website", "ByteReels", "MasteryLoop", "Learn LLM"],
       },
       {
         name: "Node.js",
@@ -205,7 +205,7 @@ const SKILL_CATEGORIES = [
           "Aiyu Swimwear Website",
           "Chess Game",
           "Portfolio Website",
-          "AnkiEx (Startup)",
+          "Mneme (Startup)",
         ],
       },
       {
@@ -217,7 +217,7 @@ const SKILL_CATEGORIES = [
           "Aiyu Swimwear Website",
           "Chess Game",
           "Portfolio Website",
-          "AnkiEx (Startup)",
+          "Mneme (Startup)",
         ],
       },
       {
@@ -241,7 +241,7 @@ const SKILL_CATEGORIES = [
           "CFA Workflow Tracker",
           "Aiyu Swimwear Website",
           "20/20/20 Eye Break App",
-          "AnkiEx (Startup)",
+          "Mneme (Startup)",
         ],
       },
       {
@@ -249,27 +249,27 @@ const SKILL_CATEGORIES = [
         level: "intermediate",
         description:
           "Used to deploy and host web applications with CI/CD from GitHub.",
-        projects: ["Portfolio Website", "Aiyu Swimwear Website", "ByteReels"],
+        projects: ["Portfolio Website", "Aiyu Swimwear Website", "ByteReels", "Momentum"],
       },
       {
         name: "Terminal",
         level: "intermediate",
         description:
           "Daily use for Git, package managers, running scripts, and navigating projects.",
-        projects: ["Chess Game", "Portfolio Website", "AnkiEx (Startup)"],
+        projects: ["Chess Game", "Portfolio Website", "Mneme (Startup)"],
       },
       {
         name: "Xcode",
         level: "learning",
         description: "Used for macOS and Swift development.",
-        projects: ["AnkiEx (Startup)"],
+        projects: ["Mneme (Startup)"],
       },
       {
         name: "Vitest",
         level: "intermediate",
         description:
           "Used for unit and integration testing across web projects.",
-        projects: ["ByteReels"],
+        projects: ["ByteReels", "Learn LLM"],
       },
       {
         name: "Docker",
@@ -317,7 +317,7 @@ const SKILL_CATEGORIES = [
         name: "Supabase",
         level: "learning",
         description: "Used as backend database and auth provider.",
-        projects: ["AnkiEx (Startup)", "Aiyu Swimwear Website"],
+        projects: ["Mneme (Startup)", "Aiyu Swimwear Website", "Momentum"],
       },
       {
         name: "MongoDB",

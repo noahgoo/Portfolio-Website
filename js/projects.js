@@ -15,10 +15,10 @@
 const PROJECTS = [
   {
     number: "01",
-    title: "AnkiEx (Startup)",
+    title: "Mneme (Startup)",
     category: "ai",
     featured: true,
-    image: "assets/images/anki-ex-startup.png",
+    image: "assets/images/mneme-startup.png",
     imageClass: "",
     imageStyle: "",
     tags: ["Swift", "JavaScript", "Supabase", "Claude Code"],
@@ -41,6 +41,63 @@ const PROJECTS = [
   },
   {
     number: "02",
+    title: "Learn LLM",
+    category: "ai",
+    featured: false,
+    image: "assets/images/project_learn_llm.jpg",
+    imageClass: "",
+    imageStyle: "",
+    tags: ["Next.js", "TypeScript", "Three.js", "Transformers.js"],
+    description:
+      "Interactive 3D guide to how LLMs work. Type a sentence and follow it through tokenization, embeddings, attention, and next-token prediction, running GPT-2 live in your browser.",
+    features: [
+      "Scroll-driven 3D journey through the model",
+      "Real token IDs, attention values, and probabilities",
+      "Simple and Technical explanations per stage",
+      "Static export on GitHub Pages",
+    ],
+    links: [
+      {
+        label: "View Demo",
+        href: "https://noahgoo.github.io/learn-llm/",
+        style: "primary",
+      },
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/learn-llm",
+        style: "outline",
+      },
+    ],
+    href: "https://noahgoo.github.io/learn-llm/",
+  },
+  {
+    number: "03",
+    title: "Momentum",
+    category: "web",
+    featured: false,
+    image: "assets/images/project_momentum.png",
+    imageClass: "",
+    imageStyle: "",
+    tags: ["React", "Expo", "TypeScript", "Supabase"],
+    description:
+      "Coach and client fitness platform. Coaches build programs once and assign them to many clients through a web portal, while clients follow them in a mobile app.",
+    features: [
+      "Coach web portal and Expo mobile app",
+      "Programs deep-copied per client on assign",
+      "Supabase Postgres with row-level security",
+      "pnpm monorepo with shared code package",
+    ],
+    links: [
+      {
+        label: "View GitHub",
+        href: "https://github.com/noahgoo/momentum",
+        style: "outline",
+      },
+    ],
+    href: "https://github.com/noahgoo/momentum",
+  },
+  {
+    number: "04",
     title: "Chess Game",
     category: "software",
     featured: false,
@@ -65,7 +122,7 @@ const PROJECTS = [
     href: "https://github.com/noahgoo/chess",
   },
   {
-    number: "03",
+    number: "05",
     title: "Laser Tag Unit",
     category: "hardware",
     featured: false,
@@ -85,7 +142,7 @@ const PROJECTS = [
     href: "#",
   },
   {
-    number: "04",
+    number: "06",
     title: "Aiyu Swimwear Website",
     category: "web",
     featured: true,
@@ -105,10 +162,10 @@ const PROJECTS = [
     href: "https://aiyuswim.com",
   },
   {
-    number: "05",
+    number: "07",
     title: "Kapolei Tools",
     category: "web",
-    featured: true,
+    featured: false,
     image: "assets/images/kapoleitools.png",
     imageClass: "",
     imageStyle: "",
@@ -125,7 +182,7 @@ const PROJECTS = [
     href: "#",
   },
   {
-    number: "06",
+    number: "08",
     title: "20/20/20 Eye Break App",
     category: "software",
     featured: false,
@@ -150,10 +207,10 @@ const PROJECTS = [
     href: "https://github.com/noahgoo/eye",
   },
   {
-    number: "07",
+    number: "09",
     title: "MasteryLoop",
     category: "web",
-    featured: false,
+    featured: true,
     image: "assets/images/project_masteryloop.png",
     imageClass: "",
     imageStyle: "",
@@ -176,7 +233,7 @@ const PROJECTS = [
     href: "https://github.com/noahgoo/startup",
   },
   {
-    number: "08",
+    number: "10",
     title: "ByteReels",
     category: "web",
     featured: true,
@@ -202,10 +259,10 @@ const PROJECTS = [
     href: "https://github.com/noahgoo/ByteReels",
   },
   {
-    number: "09",
+    number: "11",
     title: "Arduino Light Following Robot",
     category: "hardware",
-    featured: true,
+    featured: false,
     image: "assets/images/light_robot.png",
     imageClass: "",
     imageStyle: "object-position: center 40%;",
@@ -228,10 +285,10 @@ const PROJECTS = [
     href: "https://youtu.be/2vacC3jIk4E",
   },
   {
-    number: "10",
+    number: "12",
     title: "Datalog Interpreter",
     category: "software",
-    featured: false,
+    featured: true,
     image: "assets/images/datalog_intepreter.png",
     imageClass: "",
     imageStyle: "",
@@ -253,7 +310,7 @@ const PROJECTS = [
     href: "https://github.com/byu-cs-236-f24/project-5-noahgoo.git",
   },
   {
-    number: "11",
+    number: "13",
     title: "Mini Security System",
     category: "hardware",
     featured: false,
@@ -283,7 +340,7 @@ const PROJECTS = [
     href: "https://youtu.be/rSQOoB-HKwE",
   },
   {
-    number: "12",
+    number: "14",
     title: "Smart Weather Station",
     category: "hardware",
     featured: false,
@@ -309,7 +366,7 @@ const PROJECTS = [
     href: "https://youtube.com/shorts/LDfa5cCFOwM?feature=share",
   },
   {
-    number: "13",
+    number: "15",
     title: "FPGA Pong",
     category: "hardware",
     featured: false,
@@ -335,7 +392,7 @@ const PROJECTS = [
     href: "https://youtu.be/vnM2SgINZ18?si=4kTL2nftnHlf8Q0Z",
   },
   {
-    number: "14",
+    number: "16",
     title: "Smart Doorbell",
     category: "hardware",
     featured: false,
